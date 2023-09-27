@@ -1,6 +1,11 @@
 import styled from 'styled-components';
+import { VscMenu } from 'react-icons/vsc';
+import { AiOutlineClose } from 'react-icons/ai';
 
 export const HeaderContainer = styled.div`
+  display: flex;
+  height: 70px;
+  justify-content: center;
   @media screen and (min-width: 430px) {
     display: flex;
     height: 110px;
@@ -71,9 +76,12 @@ export const HeaderText = styled.p`
 `;
 
 export const NavList = styled.ul`
-  display: flex;
-  list-style: none;
-  padding-inline-start: 10px;
+  display: none;
+  @media screen and (min-width: 430px) {
+    display: flex;
+    list-style: none;
+    padding-inline-start: 10px;
+  }
 `;
 
 export const NavItem = styled.li`
@@ -178,3 +186,88 @@ export const HeaderButton = styled.button`
     }
   }
 `;
+
+export const BurgerMenu = styled.div`
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  @media screen and (min-width: 430px) {
+    display: none;
+  }
+`;
+
+export const MenuIcon = styled(VscMenu)`
+  width: 20px;
+  height: 27.5px;
+  fill: #5e3f2f;
+  cursor: pointer;
+`;
+
+export const SideMenu = styled.div`
+  position: fixed;
+  top: -100%; /* Скрываем меню сверху */
+  left: 0;
+  width: 100%;
+  height: 374px;
+  background-color: #fff;
+  transition: top 0.3s ease;
+  z-index: 999;
+  border-radius: 0 0 15px 15px;
+  border: 1px solid #5e3f2f;
+
+  &.open {
+    top: 0; /* Показывает меню */
+  }
+  @media screen and (min-width: 430px) {
+    display: none;
+  }
+`;
+
+export const CloseBtn = styled(AiOutlineClose)`
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  fill: black;
+  cursor: pointer;
+
+  
+`;
+
+export const SideNavItem = styled.p`
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: center;
+  color: #5E3F2F;
+  padding: 24px 0;
+  margin: 0;
+  cursor: pointer;
+  border-bottom: 1px solid #5E3F2F;
+
+  &:hover{
+    background-color: #5E3F2F;
+    color:white;
+  }
+`;
+
+export const SideNavButton = styled.button`
+    width: calc(100% - 48px);
+    height: 54px;
+    border-radius: 30px;
+    background-color: #5c3d2e;
+    color: #ffffff;
+    border: 0;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 28px 24px;
+    &:hover {
+      background-color: #b99b8c;
+    }
+`
