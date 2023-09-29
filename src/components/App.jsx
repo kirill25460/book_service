@@ -1,6 +1,8 @@
+import Footer from "./Footer/Footer";
 import Header from "./Header/Header";
 import MainSection from "./MainSection/MainSection";
 import Services from "./Services/Services";
+import News from "./News/News";
 
 export const App = () => {
   return (
@@ -8,6 +10,8 @@ export const App = () => {
       <Header />
       <MainSection />
       <Services />
+      <News/>
+      <Footer />
     </div>
   );
 };

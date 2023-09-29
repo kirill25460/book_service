@@ -98,7 +98,7 @@ export const NavItem = styled.li`
     margin-right: 10px;
     cursor: pointer;
     &:hover{
-      text-decoration: underline;
+      text-decoration: underline 3px;
     }
   }
   @media screen and (min-width: 710px) {
@@ -112,7 +112,7 @@ export const NavItem = styled.li`
     margin-right: 15px;
     cursor: pointer;
     &:hover{
-      text-decoration: underline;
+      text-decoration: underline 3px;
     }
   }
   @media screen and (min-width: 1005px) {
@@ -125,10 +125,10 @@ export const NavItem = styled.li`
     color: #232323;
     margin-right: 45px;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
 
     &:hover{
-      text-decoration: underline;
+      
+      text-decoration: underline 3px;
     }
   }
 `;

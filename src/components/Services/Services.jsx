@@ -10,15 +10,15 @@ import {
   ServicesItemSubText,
   MoreContainer,
   MoreText,
-  Arrow
+  Arrow,
 } from './Services.styled';
 
-import book1 from '../../images/book1.png'
-import book2 from '../../images/book2.png'
-import book3 from '../../images/book3.png'
-import book4 from '../../images/book4.png'
-import book5 from '../../images/book5.png'
-import book6 from '../../images/book6.png'
+import book1 from '../../images/book1.png';
+import book2 from '../../images/book2.png';
+import book3 from '../../images/book3.png';
+import book4 from '../../images/book4.png';
+import book5 from '../../images/book5.png';
+import book6 from '../../images/book6.png';
 
 const Services = () => {
   const services = [
@@ -73,9 +73,11 @@ const Services = () => {
         {services.map(({ icon, mainText, subText }) => {
           return (
             <ServicesItem key={icon}>
-              <ServicesItemImg src={icon} alt={mainText}/>
-              <ServicesItemMainText>{mainText}</ServicesItemMainText>
-              <ServicesItemSubText>{subText}</ServicesItemSubText>
+              <div>
+                <ServicesItemImg src={icon} alt={mainText} />
+                <ServicesItemMainText>{mainText}</ServicesItemMainText>
+                <ServicesItemSubText>{subText}</ServicesItemSubText>
+              </div>
               <MoreContainer>
                 <MoreText>Дізнатись більше</MoreText>
                 <Arrow />
