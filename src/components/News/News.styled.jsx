@@ -13,7 +13,7 @@ export const Next = styled(MdArrowForwardIos)`
   color: #6e4836;
   width: 36px;
   height: 36px;
-  top:102%;
+  top: 102%;
   &:hover {
     color: #ad775e;
   }
@@ -21,7 +21,7 @@ export const Next = styled(MdArrowForwardIos)`
     color: #6e4836;
     width: 24px;
     height: 24px;
-    top:50%;
+    top: 50%;
     &:hover {
       color: #ad775e;
     }
@@ -29,10 +29,10 @@ export const Next = styled(MdArrowForwardIos)`
 `;
 
 export const Prev = styled(MdArrowBackIos)`
-    color: #6e4836;
+  color: #6e4836;
   width: 36px;
   height: 36px;
-  top:102%;
+  top: 102%;
   &:hover {
     color: #ad775e;
   }
@@ -40,7 +40,7 @@ export const Prev = styled(MdArrowBackIos)`
     color: #6e4836;
     width: 24px;
     height: 24px;
-    top:50%;
+    top: 50%;
     &:hover {
       color: #ad775e;
     }
@@ -110,13 +110,17 @@ export const SlideMainText = styled.p`
 `;
 
 export const SlideData = styled.p`
-  font-family: 'DM Sans', sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 30px;
-  color: #ff8956;
-  margin: 0 0 15px 0;
+  display: none;
+  @media screen and (min-width: 980px) {
+    display: block;
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    color: #ff8956;
+    margin: 0 0 15px 0;
+  }
 `;
 
 export const SlideSubText = styled.p`
