@@ -118,7 +118,7 @@ export const SlideButton = styled.button`
   background: #6e4836;
   border-radius: 40px;
   padding: 18px 24px;
-  
+
   border: 0;
 
   font-family: 'Raleway';
@@ -129,6 +129,10 @@ export const SlideButton = styled.button`
   text-align: center;
   color: #ffffff;
   margin: 0 auto;
+  &:hover {
+    transition: background-color 0.3s ease;
+    background: #d48f6e;
+  }
   @media screen and (min-width: 980px) {
     display: flex;
     justify-content: center;
@@ -146,6 +150,10 @@ export const SlideButton = styled.button`
     line-height: 18px;
     text-align: center;
     color: #ffffff;
+    transition: background-color 0.3s ease;
+    &:hover {
+      background: #d48f6e;
+    }
   }
 `;
 
@@ -157,9 +165,8 @@ export const Search = styled(BsSearch)`
 `;
 
 export const Hide = styled.span`
-    display: none;
-    @media screen and (min-width: 980px) {
-        display: block;
-    }
-
-`
+  display: none;
+  @media screen and (min-width: 980px) {
+    display: block;
+  }
+`;
