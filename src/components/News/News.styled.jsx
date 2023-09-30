@@ -11,19 +11,39 @@ export const NewsContainer = styled.div`
 
 export const Next = styled(MdArrowForwardIos)`
   color: #6e4836;
-  width: 24px;
-  height: 24px;
+  width: 36px;
+  height: 36px;
+  top:102%;
   &:hover {
     color: #ad775e;
+  }
+  @media screen and (min-width: 980px) {
+    color: #6e4836;
+    width: 24px;
+    height: 24px;
+    top:50%;
+    &:hover {
+      color: #ad775e;
+    }
   }
 `;
 
 export const Prev = styled(MdArrowBackIos)`
-  color: #6e4836;
-  width: 24px;
-  height: 24px;
+    color: #6e4836;
+  width: 36px;
+  height: 36px;
+  top:102%;
   &:hover {
     color: #ad775e;
+  }
+  @media screen and (min-width: 980px) {
+    color: #6e4836;
+    width: 24px;
+    height: 24px;
+    top:50%;
+    &:hover {
+      color: #ad775e;
+    }
   }
 `;
 
