@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { VscMenu } from 'react-icons/vsc';
-import { AiOutlineClose } from 'react-icons/ai';
 
 export const HeaderContainer = styled.div`
   display: flex;
@@ -220,7 +219,7 @@ export const SideMenu = styled.div`
   width: 100%;
   height: 374px;
   background-color: #fff;
-  transition: top 0.3s ease;
+  transition: top 1s ease;
   z-index: 999;
   border-radius: 0 0 15px 15px;
   border: 1px solid #5e3f2f;
@@ -231,16 +230,6 @@ export const SideMenu = styled.div`
   @media screen and (min-width: 430px) {
     display: none;
   }
-`;
-
-export const CloseBtn = styled(AiOutlineClose)`
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  fill: black;
-  cursor: pointer;
-
-  
 `;
 
 export const SideNavItem = styled.p`

@@ -10,19 +10,33 @@ import {
   BurgerMenu,
   MenuIcon,
   SideMenu,
-  CloseBtn,
   SideNavItem,
   SideNavButton
 } from './Header.styled';
 import logo from '../../images/logo.png';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const menuRef = useRef(null); 
 
-  const toggleMenu = () => {
+  const handleClickOutside = (event) => {
+    if (menuRef.current && !menuRef.current.contains(event.target)) {
+      setIsOpen(false); 
+    }
+  };
+
+  useEffect(() => {
+
+    document.addEventListener('click', handleClickOutside);
+    return () => {
+      document.removeEventListener('click', handleClickOutside);
+    };
+  }, []);
+
+  const toggleMenu = (event) => {
+    event.stopPropagation();
     setIsOpen(!isOpen);
-    console.log(isOpen);
   };
 
   return (
@@ -31,8 +45,7 @@ const Header = () => {
         <BurgerMenu>
           <MenuIcon onClick={toggleMenu} />
         </BurgerMenu>
-        <SideMenu className={isOpen ? 'open' : ''}>
-          <CloseBtn onClick={toggleMenu} />
+        <SideMenu ref={menuRef} className={isOpen ? 'open' : ''}>
           <SideNavItem>Головна</SideNavItem>
           <SideNavItem>Продукція та послуги</SideNavItem>
           <SideNavItem>Новини</SideNavItem>
