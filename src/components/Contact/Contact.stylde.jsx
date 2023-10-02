@@ -5,7 +5,7 @@ export const ContactContainer = styled.div`
   background-image: url(${bg});
   background-size: cover; /* Изображение будет масштабировано так, чтобы покрыть всю область фона */
   background-repeat: no-repeat; /* Запрет повторения изображения */
-  /* background-attachment: fixed; Фиксация изображения, чтобы оно не двигалось при прокрутке */
+   background-attachment: fixed; /*Фиксация изображения, чтобы оно не двигалось при прокрутке */
   background-position: center center;
   height: 928px;
   display: flex;
