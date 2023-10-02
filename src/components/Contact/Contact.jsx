@@ -3,9 +3,11 @@ import {
   Left,
   Right,
   FormContainer,
-  FormSmallText,
+  FormText,
   FormSmallInput,
-  FormSmallContainer
+  FormSmallContainer,
+  FormBigContainer,
+  FormBigInput
 } from './Contact.stylde';
 
 const Contact = () => {
@@ -14,21 +16,25 @@ const Contact = () => {
       <Left>
         <FormContainer>
           <FormSmallContainer>
-            <FormSmallText>Ім’я</FormSmallText>
-            <FormSmallInput></FormSmallInput>
+            <FormText>Ім’я</FormText>
+            <FormSmallInput placeholder='Василь Митенко...'/>
           </FormSmallContainer>
           <FormSmallContainer>
-            <FormSmallText>Email</FormSmallText>
-            <FormSmallInput></FormSmallInput>
+            <FormText>Email</FormText>
+            <FormSmallInput placeholder='example@email.com'/>
           </FormSmallContainer>
           <FormSmallContainer>
-            <FormSmallText>Номер телефону</FormSmallText>
-            <FormSmallInput></FormSmallInput>
+            <FormText>Номер телефону</FormText>
+            <FormSmallInput placeholder='+380 123 4 56 789'/>
           </FormSmallContainer>
           <FormSmallContainer>
-            <FormSmallText>Компанія (необов’язково)</FormSmallText>
-            <FormSmallInput></FormSmallInput>
+            <FormText>Компанія (необов’язково)</FormText>
+            <FormSmallInput placeholder='Facebook'/>
           </FormSmallContainer>
+          <FormBigContainer>
+            <FormText>Коментар</FormText>
+            <FormBigInput />
+          </FormBigContainer>
         </FormContainer>
       </Left>
       <Right></Right>
