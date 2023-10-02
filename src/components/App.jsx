@@ -3,6 +3,7 @@ import Header from "./Header/Header";
 import MainSection from "./MainSection/MainSection";
 import Services from "./Services/Services";
 import News from "./News/News";
+import Contact from "./Contact/Contact";
 
 export const App = () => {
   return (
@@ -10,6 +11,7 @@ export const App = () => {
       <Header />
       <MainSection />
       <Services />
+      <Contact />
       <News/>
       <Footer />
     </div>
