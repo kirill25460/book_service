@@ -1,5 +1,5 @@
-import { MainContainer,  MainText } from './MainSection.styled';
-
+import { MainContainer,  MainText, MainPic } from './MainSection.styled';
+import man from 'images/wizard.png';
 
 
 const MainSection = () => {
@@ -7,6 +7,8 @@ const MainSection = () => {
     <MainContainer>
 
       <MainText>Книга, це книга, люби кого? Книгу.</MainText>
+    
+    <MainPic src={man} alt="Man"/>
     </MainContainer>
   );
 };
