@@ -1,14 +1,17 @@
 import styled from 'styled-components';
 import bg from '../../images/form_bg.png';
+import { FiArrowRight, FiMail } from 'react-icons/fi';
+import {BsTelephone, BsGeoAlt} from 'react-icons/bs';
 
 export const ContactContainer = styled.div`
   background-image: url(${bg});
   background-size: cover; /* Изображение будет масштабировано так, чтобы покрыть всю область фона */
   background-repeat: no-repeat; /* Запрет повторения изображения */
-   background-attachment: fixed; /*Фиксация изображения, чтобы оно не двигалось при прокрутке */
+  background-attachment: fixed; /*Фиксация изображения, чтобы оно не двигалось при прокрутке */
   background-position: center center;
   height: 928px;
   display: flex;
+  justify-content: space-between;
 `;
 
 export const Left = styled.div`
@@ -16,7 +19,11 @@ export const Left = styled.div`
   margin-top: 135px;
 `;
 
-export const Right = styled.div``;
+export const Right = styled.div`
+  margin-top: 135px;
+  margin-right: 130px;
+  width: 479px;
+`;
 
 export const FormContainer = styled.form`
   width: 538px;
@@ -82,3 +89,95 @@ export const FormBigInput = styled.input`
     outline: none;
   }
 `;
+
+export const FormButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 189px;
+  height: 66px;
+  border-radius: 40px;
+  border: 0;
+  background-color: #5c3d2e;
+  color: #fff;
+
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  /* identical to box height, or 100% */
+`;
+
+export const Arrow = styled(FiArrowRight)`
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+  color: #fff;
+`;
+
+export const RightSmallText = styled.p`
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  font-variant: small-caps;
+  color: #ff8956;
+  margin: 0 0 8px 0;
+`;
+
+export const RightMainTitle = styled.p`
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 50px;
+  color: #ffffff;
+  margin: 0 0 16px 0;
+`;
+
+export const RightSubTitle = styled.p`
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  color: #ab9284;
+  margin: 0 0 35px 0;
+`;
+
+export const RightContactLink = styled.a`
+  display: flex; 
+  align-items: center; 
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 18px;
+  color: #ab9284;
+  cursor: pointer;
+  margin-bottom: 25px;
+  /* line-height: 30px; */
+  width: 200px;
+
+  &:hover {
+    color: #e2c4b2;
+  }
+`;
+
+export const Mail = styled(FiMail)`
+  margin-right: 8px;
+`;
+
+export const Tel = styled(BsTelephone)`
+  margin-right: 8px;
+`;
+
+export const Geo = styled(BsGeoAlt)`
+  margin-right: 8px;
+`;
+
+export const MagicPic = styled.img`
+    margin-top: -75px;
+`
