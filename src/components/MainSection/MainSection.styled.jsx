@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import GearsImg from '../../images/gears2.png';
 
-export const MainContainer = styled.div`overflow:hidden;
+export const MainContainer = styled.div`
+overflow:hidden;
   background-image: url(${GearsImg});
   background-size: cover; /* Изображение будет масштабировано так, чтобы покрыть всю область фона */
   background-repeat: no-repeat; /* Запрет повторения изображения */
@@ -46,6 +47,7 @@ line-height: 22px; /* 122.222% */
 
 export const MainButton = styled.button`
 display: flex;
+z-index:20;
   align-items: center;
   justify-content: center;
   width: 255px;
@@ -69,3 +71,9 @@ export const MainPic = styled.img`
 
 
 export const ParallaxPic = styled.img`position:absolute;`;
+
+export const ParallaxPicBig = styled.img`position:absolute;
+width:225px;
+height:200px;
+margin-left:450px;
+`;
