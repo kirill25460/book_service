@@ -4,15 +4,25 @@ import { FiArrowRight, FiMail } from 'react-icons/fi';
 import { BsTelephone, BsGeoAlt } from 'react-icons/bs';
 
 export const ContactContainer = styled.div`
-  background-image: url(${bg});
-  background-size: cover; /* Изображение будет масштабировано так, чтобы покрыть всю область фона */
-  background-repeat: no-repeat; /* Запрет повторения изображения */
-  background-attachment: fixed; /*Фиксация изображения, чтобы оно не двигалось при прокрутке */
-  background-position: center center;
-  height: 928px;
+  height: 1285px;
   display: flex;
   justify-content: space-between;
-
+  flex-direction: column-reverse;
+  background-color: #2c2322;
+  align-items: center;
+  position: relative;
+  @media screen and (min-width: 950px) {
+    background-image: url(${bg});
+    background-size: cover; /* Изображение будет масштабировано так, чтобы покрыть всю область фона */
+    background-repeat: no-repeat; /* Запрет повторения изображения */
+    background-attachment: fixed; /*Фиксация изображения, чтобы оно не двигалось при прокрутке */
+    background-position: center center;
+    height: 928px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: start;
+  }
   @media screen and (min-width: 1365px) {
     background-image: url(${bg});
     background-size: cover; /* Изображение будет масштабировано так, чтобы покрыть всю область фона */
@@ -21,13 +31,19 @@ export const ContactContainer = styled.div`
     background-position: center center;
     height: 928px;
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
+    flex-direction: row;
+    align-items: start;
   }
 `;
 
 export const Left = styled.div`
-  margin-left: 60px;
-  margin-top: 50px;
+  margin-left: 0;
+  margin-top: 0;
+  @media screen and (min-width: 950px) {
+    margin-left: 60px;
+    margin-top: 50px;
+  }
   @media screen and (min-width: 1080px) {
     margin-left: 40px;
     margin-top: 135px;
@@ -39,9 +55,15 @@ export const Left = styled.div`
 `;
 
 export const Right = styled.div`
-  margin-top: 60px;
-  margin-right: 40px;
-  width: 479px;
+  text-align: center;
+  margin-top: 58px;
+  margin-right: 0;
+  @media screen and (min-width: 950px) {
+    text-align: left;
+    margin-top: 60px;
+    margin-right: 40px;
+    width: 479px;
+  }
   @media screen and (min-width: 1080px) {
     margin-top: 135px;
     margin-right: 40px;
@@ -55,7 +77,8 @@ export const Right = styled.div`
 `;
 
 export const FormContainer = styled.form`
-  width: 300px;
+  display: none;
+  /* max-width: 600px;
   height: 750px;
   padding: 30px 20px 30px 20px;
   background-color: #e5d3c8;
@@ -63,6 +86,7 @@ export const FormContainer = styled.form`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-right: 10px; */
   @media screen and (min-width: 1080px) {
     width: 460px;
     height: 537px;
@@ -72,6 +96,7 @@ export const FormContainer = styled.form`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-right: 0;
   }
 
   @media screen and (min-width: 1365px) {
@@ -83,6 +108,7 @@ export const FormContainer = styled.form`
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-right: 0;
   }
 `;
 
@@ -263,20 +289,38 @@ export const RightMainTitle = styled.p`
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 44px;
+  font-size: 30px;
   line-height: 50px;
   color: #ffffff;
   margin: 0 0 16px 0;
+  @media screen and (min-width: 950px) {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 50px;
+    color: #ffffff;
+    margin: 0 0 16px 0;
+  }
 `;
 
 export const RightSubTitle = styled.p`
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 30px;
   color: #ab9284;
   margin: 0 0 35px 0;
+  @media screen and (min-width: 950px) {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 30px;
+    color: #ab9284;
+    margin: 0 0 35px 0;
+  }
 `;
 
 export const RightContactLink = styled.a`
@@ -292,9 +336,30 @@ export const RightContactLink = styled.a`
   margin-bottom: 25px;
   /* line-height: 30px; */
   width: 200px;
-
+  position: relative; /* Устанавливаем позицию для ссылок */
+  z-index: 2;
+  margin-left: 15px;
   &:hover {
     color: #e2c4b2;
+  }
+  @media screen and (min-width: 950px) {
+    display: flex;
+    align-items: center;
+    font-family: 'DM Sans';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    color: #ab9284;
+    cursor: pointer;
+    margin-bottom: 25px;
+    /* line-height: 30px; */
+    width: 200px;
+    position: relative; /* Устанавливаем позицию для ссылок */
+    z-index: 2;
+    &:hover {
+      color: #e2c4b2;
+    }
   }
 `;
 
@@ -311,6 +376,26 @@ export const Geo = styled(BsGeoAlt)`
 `;
 
 export const MagicPic = styled.img`
-  margin-top: -75px;
-  margin-left: -75px;
+  display: none;
+  @media screen and (min-width: 950px) {
+    display: block;
+    margin-top: -75px;
+    margin-left: -100px;
+  }
+  @media screen and (min-width: 1365px) {
+    display: block;
+    margin-top: -75px;
+    margin-left: -75px;
+    position: relative; /* Устанавливаем позицию для картинки */
+    z-index: 1;
+  }
+`;
+
+export const MagicSmallPic = styled.img`
+  position: absolute;
+  right: 0;
+  top: 210px;
+  @media screen and (min-width: 950px) {
+    display: none;
+  }
 `;

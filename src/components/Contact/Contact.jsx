@@ -17,10 +17,12 @@ import {
   Mail,
   Tel,
   Geo,
-  MagicPic
+  MagicPic,
+  MagicSmallPic
 } from './Contact.stylde';
 
 import Magic from '../../images/ContactMagic.png'
+import SmallMagic from '../../images/ContactSmallMagic.png'
 
 const Contact = () => {
   return (
@@ -60,6 +62,7 @@ const Contact = () => {
         <RightContactLink><Tel/>+380 986940143</RightContactLink>
         <RightContactLink><Geo/>м. Львів, вулиця Зелена 143 А</RightContactLink>
         <MagicPic src={Magic} alt='Magic' />
+        <MagicSmallPic src={SmallMagic} alt='Magic' />
       </Right>
     </ContactContainer>
   );
