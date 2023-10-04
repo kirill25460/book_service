@@ -26,7 +26,7 @@ import SmallMagic from '../../images/ContactSmallMagic.png'
 
 const Contact = () => {
   return (
-    <ContactContainer>
+    <ContactContainer id='contacts'>
       <Left>
         <FormContainer>
           <FormSmallContainer>

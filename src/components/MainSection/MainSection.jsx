@@ -15,7 +15,7 @@ import { MouseParallax } from 'react-just-parallax';
 
 const MainSection = () => {
   return (
-    <MainContainer>
+    <MainContainer id="main">
        <MouseParallax>
       <ParallaxPic src={detail} alt="detail"/>
     </MouseParallax>

@@ -87,7 +87,7 @@ const News = () => {
     },
   ];
   return (
-    <NewsContainer>
+    <NewsContainer id="news">
       <Slider {...settings}>
         {news.map(({ title, subTitle, img, data }) => {
           return (
