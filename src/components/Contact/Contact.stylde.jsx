@@ -77,16 +77,47 @@ export const Right = styled.div`
 `;
 
 export const FormContainer = styled.form`
-  display: none;
-  /* max-width: 600px;
-  height: 750px;
+  position: relative;
+  z-index: 2;
+  width: 302px;
+  height: 802px;
   padding: 30px 20px 30px 20px;
   background-color: #e5d3c8;
   border-radius: 25px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-right: 10px; */
+  margin-right: 0;
+  margin-bottom: 60px;
+  @media screen and (min-width: 670px) {
+    position: relative;
+    z-index: 2;
+    width: 600px;
+    height: 700px;
+    padding: 30px 20px 30px 20px;
+    background-color: #e5d3c8;
+    border-radius: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 950px) {
+    position: relative;
+    z-index: 2;
+    width: 300px;
+    height: 750px;
+    padding: 30px 20px 30px 20px;
+    background-color: #e5d3c8;
+    border-radius: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: 0;
+    margin-bottom: 0;
+  }
   @media screen and (min-width: 1080px) {
     width: 460px;
     height: 537px;
@@ -97,6 +128,7 @@ export const FormContainer = styled.form`
     flex-wrap: wrap;
     justify-content: space-between;
     margin-right: 0;
+    margin-bottom: 0;
   }
 
   @media screen and (min-width: 1365px) {
@@ -109,6 +141,7 @@ export const FormContainer = styled.form`
     flex-wrap: wrap;
     justify-content: space-between;
     margin-right: 0;
+    margin-bottom: 0;
   }
 `;
 
@@ -134,7 +167,7 @@ export const FormSmallInput = styled.input`
   line-height: 18px;
   color: #ab9284;
 
-  width: 240px;
+  width: 282px;
   height: 60px;
   border-radius: 50px;
   border: none;
@@ -144,6 +177,46 @@ export const FormSmallInput = styled.input`
 
   &:focus {
     outline: none;
+  }
+  @media screen and (min-width: 670px) {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    color: #ab9284;
+
+    width: 200px;
+    height: 60px;
+    border-radius: 50px;
+    border: none;
+    padding-left: 24px;
+
+    margin-bottom: 24px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+  @media screen and (min-width: 950px) {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 18px;
+    color: #ab9284;
+
+    width: 240px;
+    height: 60px;
+    border-radius: 50px;
+    border: none;
+    padding-left: 24px;
+
+    margin-bottom: 24px;
+
+    &:focus {
+      outline: none;
+    }
   }
   @media screen and (min-width: 1080px) {
     font-family: 'Raleway', sans-serif;
@@ -195,7 +268,7 @@ export const FormBigInput = styled.input`
   line-height: 18px;
   color: #ab9284;
 
-  width: 300px;
+  width: 312px;
   height: 142px;
   border-radius: 20px;
   border: none;
@@ -205,6 +278,47 @@ export const FormBigInput = styled.input`
 
   &:focus {
     outline: none;
+  }
+  @media screen and (min-width: 670px) {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #ab9284;
+
+    width: 500px;
+    height: 142px;
+    border-radius: 20px;
+    border: none;
+    padding-left: 10px;
+
+    margin-bottom: 32px;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  @media screen and (min-width: 950px) {
+    font-family: 'Raleway', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: #ab9284;
+
+    width: 300px;
+    height: 142px;
+    border-radius: 20px;
+    border: none;
+    padding-left: 10px;
+
+    margin-bottom: 32px;
+
+    &:focus {
+      outline: none;
+    }
   }
   @media screen and (min-width: 1080px) {
     font-family: 'Raleway', sans-serif;
@@ -339,6 +453,7 @@ export const RightContactLink = styled.a`
   position: relative; /* Устанавливаем позицию для ссылок */
   z-index: 2;
   margin-left: 15px;
+  text-align: left;
   &:hover {
     color: #e2c4b2;
   }
