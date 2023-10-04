@@ -457,6 +457,10 @@ export const RightContactLink = styled.a`
   &:hover {
     color: #e2c4b2;
   }
+
+  &:first-child {
+    width: 300px;
+  }
   @media screen and (min-width: 950px) {
     display: flex;
     align-items: center;
@@ -474,6 +478,9 @@ export const RightContactLink = styled.a`
     z-index: 2;
     &:hover {
       color: #e2c4b2;
+    }
+    &:first-child {
+      width: 300px;
     }
   }
 `;
@@ -509,7 +516,12 @@ export const MagicPic = styled.img`
 export const MagicSmallPic = styled.img`
   position: absolute;
   right: 0;
-  top: 210px;
+  top: 150px;
+  @media screen and (min-width: 670px) {
+    position: absolute;
+    right: 0;
+    top: 210px;
+  }
   @media screen and (min-width: 950px) {
     display: none;
   }
