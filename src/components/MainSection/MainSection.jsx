@@ -10,6 +10,7 @@ import {
 } from './MainSection.styled';
 import man from 'images/wizard.png';
 import detail from "images/3d-detail-gear.png";
+import detail2 from "images/low-detail-gear.png";
 import { MouseParallax } from 'react-just-parallax';
 
 const MainSection = () => {
@@ -28,9 +29,12 @@ const MainSection = () => {
         <MouseParallax>
       <ParallaxPicBig src={detail} alt="detail"/>
     </MouseParallax>
+    <MouseParallax>
+      <ParallaxPic src={detail2} alt="detail"/>
+    </MouseParallax>
       </MainLeft>
       <MouseParallax>
-      <ParallaxPic src={detail} alt="detail"/>
+      <ParallaxPic src={detail2} alt="detail"/>
     </MouseParallax>
       <MainPic src={man} alt="Man" />
       <MouseParallax>
