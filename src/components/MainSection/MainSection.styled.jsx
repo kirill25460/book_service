@@ -16,7 +16,7 @@ overflow:hidden;
 `;
 
 export const MainLeft = styled.div`
-margin-right:300px;
+margin-right:350px;
 
 `;
 
@@ -68,16 +68,12 @@ position:relative;
 export const MainPic = styled.img`
   width: 755px;
   height: 731px;
+  margin-right:120px;
+  z-index:2;
+position:relative;
 `;
 
 
 export const ParallaxPic = styled.img`position:absolute;
 z-index:1;
-`;
-
-export const ParallaxPicBig = styled.img`position:absolute;
-width:225px;
-height:200px;
-z-index:1;
-margin-left:450px;
 `;
