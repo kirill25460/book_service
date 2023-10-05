@@ -11,10 +11,12 @@ import {
   MenuIcon,
   SideMenu,
   SideNavItem,
-  SideNavButton
+  SideNavButton,
+  StyldeLink,
 } from './Header.styled';
 import logo from '../../images/logo.png';
 import { useEffect, useRef, useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,7 +45,7 @@ const Header = () => {
 
     if (section) {
       section.scrollIntoView({
-        behavior: 'smooth', 
+        behavior: 'smooth',
       });
       setIsOpen(false);
     }
@@ -56,22 +58,54 @@ const Header = () => {
           <MenuIcon onClick={toggleMenu} />
         </BurgerMenu>
         <SideMenu ref={menuRef} className={isOpen ? 'open' : ''}>
-          <SideNavItem onClick={()=>scrollToSection('main')}>Головна</SideNavItem>
-          <SideNavItem onClick={()=>scrollToSection('products')}>Продукція та послуги</SideNavItem>
-          <SideNavItem onClick={()=>scrollToSection('news')}>Новини</SideNavItem>
-          <SideNavItem onClick={()=>scrollToSection('contacts')}>Контакти</SideNavItem>
-          <SideNavButton>Калькулятор</SideNavButton>
+          <StyldeLink>
+            <SideNavItem onClick={() => scrollToSection('main')}>
+              Головна
+            </SideNavItem>
+          </StyldeLink>
+          <StyldeLink>
+            <SideNavItem onClick={() => scrollToSection('products')}>
+              Продукція та послуги
+            </SideNavItem>
+          </StyldeLink>
+          <StyldeLink>
+            <SideNavItem onClick={() => scrollToSection('news')}>
+              Новини
+            </SideNavItem>
+          </StyldeLink>
+          <StyldeLink>
+            <SideNavItem onClick={() => scrollToSection('contacts')}>
+              Контакти
+            </SideNavItem>
+          </StyldeLink>
+          <StyldeLink>
+            <SideNavButton>Калькулятор</SideNavButton>
+          </StyldeLink>
         </SideMenu>
-        <Logo src={logo} alt="Logo" />
+        <StyldeLink to="/">
+          <Logo src={logo} alt="Logo" />
+        </StyldeLink>
         <HeaderText>Книжкова Майстерня</HeaderText>
       </Left>
       <Right>
         <NavList>
-          <NavItem onClick={()=>scrollToSection('products')}>Продукція та послуги</NavItem>
-          <NavItem onClick={()=>scrollToSection('news')}>Новини</NavItem>
-          <NavItem onClick={()=>scrollToSection('contacts')}>Контакти</NavItem>
+          <StyldeLink to="/">
+            <NavItem onClick={() => scrollToSection('products')}>
+              Продукція та послуги
+            </NavItem>
+          </StyldeLink>
+          <StyldeLink to="/">
+            <NavItem onClick={() => scrollToSection('news')}>Новини</NavItem>
+          </StyldeLink>
+          <StyldeLink to="/">
+            <NavItem onClick={() => scrollToSection('contacts')}>
+              Контакти
+            </NavItem>
+          </StyldeLink>
         </NavList>
-        <HeaderButton>Калькулятор</HeaderButton>
+        <StyldeLink to="/calc">
+          <HeaderButton>Калькулятор</HeaderButton>
+        </StyldeLink>
       </Right>
     </HeaderContainer>
   );

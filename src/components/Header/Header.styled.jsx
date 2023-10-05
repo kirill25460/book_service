@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { VscMenu } from 'react-icons/vsc';
+import { NavLink } from 'react-router-dom';
 
 export const HeaderContainer = styled.div`
   display: flex;
@@ -317,3 +318,7 @@ export const SideNavButton = styled.button`
     background-color: #b99b8c;
   }
 `;
+
+export const StyldeLink = styled(NavLink)`
+  text-decoration: none;
+`

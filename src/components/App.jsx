@@ -1,19 +1,14 @@
-import Footer from "./Footer/Footer";
-import Header from "./Header/Header";
-import MainSection from "./MainSection/MainSection";
-import Services from "./Services/Services";
-import News from "./News/News";
-import Contact from "./Contact/Contact";
+import { Routes, Route } from 'react-router-dom';
+import MainPage from '../pages/MainPage/MainPage';
+import CalculatorPage from '../pages/CalculatorPage/CalculatorPage';
 
 export const App = () => {
   return (
-    <div>
-      <Header />
-      <MainSection />
-      <Services />
-      <Contact />
-      <News/>
-      <Footer />
-    </div>
+    <>
+      <Routes>
+        <Route path="*" element={<MainPage/>} />
+        <Route path="/calc" element={<CalculatorPage/>} />
+      </Routes>
+    </>
   );
 };
