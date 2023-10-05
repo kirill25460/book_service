@@ -18,7 +18,8 @@ import {
   Tel,
   Geo,
   MagicPic,
-  MagicSmallPic
+  MagicSmallPic,
+  MailLink
 } from './Contact.stylde';
 
 import Magic from '../../images/ContactMagic.png'
@@ -58,7 +59,7 @@ const Contact = () => {
         <RightSmallText>Зв’язок з нами</RightSmallText>
         <RightMainTitle>Завжди раді вас чути!</RightMainTitle>
         <RightSubTitle>Залиште свою заявку у формі зворотнього зв’язку і ми зв’яжемось з вами з першої ж нагоди!</RightSubTitle>
-        <RightContactLink><Mail/>maysternyaknyg@gmail.com</RightContactLink>
+        <RightContactLink><MailLink><Mail/>maysternyaknyg@gmail.com</MailLink></RightContactLink>
         <RightContactLink><Tel/>+380 986940143</RightContactLink>
         <RightContactLink><Geo/>м. Львів, вулиця Зелена 143 А</RightContactLink>
         <MagicPic src={Magic} alt='Magic' />

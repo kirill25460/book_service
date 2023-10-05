@@ -458,9 +458,6 @@ export const RightContactLink = styled.a`
     color: #e2c4b2;
   }
 
-  &:first-child {
-    width: 300px;
-  }
   @media screen and (min-width: 950px) {
     display: flex;
     align-items: center;
@@ -479,10 +476,13 @@ export const RightContactLink = styled.a`
     &:hover {
       color: #e2c4b2;
     }
-    &:first-child {
-      width: 300px;
-    }
   }
+`;
+
+export const MailLink = styled.p`
+  display: flex;
+  width: 300px;
+  margin: 0;
 `;
 
 export const Mail = styled(FiMail)`
