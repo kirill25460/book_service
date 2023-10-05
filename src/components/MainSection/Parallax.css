@@ -1,0 +1,9 @@
+.MouseParallax{
+    display: none;
+    width: 0px;
+    @media screen and (min-width: 950px) {
+    display:inline-block;
+    width: 100%;
+    }
+
+}

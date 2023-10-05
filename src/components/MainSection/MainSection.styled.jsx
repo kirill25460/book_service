@@ -112,9 +112,8 @@ display:none;
 `;
 
 export const MainMobPic = styled.img`
-display:block;
-z-index: 2;
 
+position: absolute;
 right: 0;
 width: 245px;
 height: 345px;
