@@ -4,17 +4,20 @@ import {
   MainLeft,
   MainButton,
   MainPic,
+  MainMobPic,
   ParallaxPic,
   MainPar,
 } from './MainSection.styled';
 import man from 'images/wizard.png';
+import mobman from "images/mob-wizard.png";
 import trydetail from "images/group-gear.png";
 import { MouseParallax } from 'react-just-parallax';
+
 
 const MainSection = () => {
   return (
     <MainContainer id="main">
-    <MouseParallax>
+    <MouseParallax >
       <ParallaxPic src={trydetail} alt="detail"/>
     </MouseParallax>
       <MainLeft>
@@ -23,6 +26,7 @@ const MainSection = () => {
         <MainButton>Галерея наших робіт</MainButton>
       </MainLeft>
       <MainPic src={man} alt="Man" />
+      <MainMobPic src={mobman} alt="Man"/>
     </MainContainer>
   );
 };

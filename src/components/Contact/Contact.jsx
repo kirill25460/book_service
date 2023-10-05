@@ -20,7 +20,7 @@ import {
   MagicPic,
   MagicSmallPic,
   MailLink,
-} from './Contact.stylde';
+} from './Contact.styled';
 
 import Magic from '../../images/ContactMagic.png';
 import SmallMagic from '../../images/ContactSmallMagic.png';
@@ -96,10 +96,10 @@ const Contact = () => {
         </FormContainer>
       </Left>
       <Right>
-        <RightSmallText>Зв’язок з нами</RightSmallText>
+        <RightSmallText>Зв&rsquo;язок з нами</RightSmallText>
         <RightMainTitle>Завжди раді вас чути!</RightMainTitle>
         <RightSubTitle>
-          Залиште свою заявку у формі зворотнього зв’язку і ми зв’яжемось з вами
+          Залиште свою заявку у формі зворотнього зв&rsquo;язку і ми зв&rsquo;яжемось з вами
           з першої ж нагоди!
         </RightSubTitle>
         <RightContactLink>
