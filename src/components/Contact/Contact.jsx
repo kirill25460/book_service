@@ -19,38 +19,78 @@ import {
   Geo,
   MagicPic,
   MagicSmallPic,
-  MailLink
+  MailLink,
 } from './Contact.stylde';
 
-import Magic from '../../images/ContactMagic.png'
-import SmallMagic from '../../images/ContactSmallMagic.png'
+import Magic from '../../images/ContactMagic.png';
+import SmallMagic from '../../images/ContactSmallMagic.png';
 
 const Contact = () => {
+
+  const handleSubmit = evt => {
+    evt.preventDefault();
+    const form = evt.currentTarget;
+    const name = form.elements.name.value;
+    const email = form.elements.email.value;
+    const tel = form.elements.tel.value;
+    const company = form.elements.company.value;
+    const comments = form.elements.comments.value;
+    console.log(name, email, tel, company, comments);
+    form.reset();
+  }
+
+
   return (
-    <ContactContainer id='contacts'>
+    <ContactContainer id="contacts">
       <Left>
-        <FormContainer>
+        <FormContainer onSubmit={handleSubmit}>
           <FormSmallContainer>
             <FormText>Ім’я</FormText>
-            <FormSmallInput placeholder="Василь Митенко..." />
+            <FormSmallInput
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Василь Митенко..."
+            />
           </FormSmallContainer>
           <FormSmallContainer>
             <FormText>Email</FormText>
-            <FormSmallInput placeholder="example@email.com" />
+            <FormSmallInput
+              type="email"
+              name="email"
+              id="email"
+              placeholder="example@email.com"
+            />
           </FormSmallContainer>
           <FormSmallContainer>
             <FormText>Номер телефону</FormText>
-            <FormSmallInput placeholder="+380 123 4 56 789" />
+            <FormSmallInput
+              type="tel"
+              name="number"
+              id="tel"
+              pattern="380-[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+              placeholder="380-67-345-67-89"
+            />
           </FormSmallContainer>
           <FormSmallContainer>
             <FormText>Компанія (необов’язково)</FormText>
-            <FormSmallInput placeholder="Facebook" />
+            <FormSmallInput
+              type="text"
+              name="company"
+              id="company"
+              placeholder="Facebook"
+            />
           </FormSmallContainer>
           <FormBigContainer>
             <FormText>Коментар</FormText>
-            <FormBigInput placeholder="Просимо вас описати ваш коментар сюди..." />
+            <FormBigInput
+              type="text"
+              name="comments"
+              id="comments"
+              placeholder="Просимо вас описати ваш коментар сюди..."
+            />
           </FormBigContainer>
-          <FormButton>
+          <FormButton type="submit">
             Надіслати <Arrow />
           </FormButton>
         </FormContainer>
@@ -58,12 +98,26 @@ const Contact = () => {
       <Right>
         <RightSmallText>Зв’язок з нами</RightSmallText>
         <RightMainTitle>Завжди раді вас чути!</RightMainTitle>
-        <RightSubTitle>Залиште свою заявку у формі зворотнього зв’язку і ми зв’яжемось з вами з першої ж нагоди!</RightSubTitle>
-        <RightContactLink><MailLink><Mail/>maysternyaknyg@gmail.com</MailLink></RightContactLink>
-        <RightContactLink><Tel/>+380 986940143</RightContactLink>
-        <RightContactLink><Geo/>м. Львів, вулиця Зелена 143 А</RightContactLink>
-        <MagicPic src={Magic} alt='Magic' />
-        <MagicSmallPic src={SmallMagic} alt='Magic' />
+        <RightSubTitle>
+          Залиште свою заявку у формі зворотнього зв’язку і ми зв’яжемось з вами
+          з першої ж нагоди!
+        </RightSubTitle>
+        <RightContactLink>
+          <MailLink>
+            <Mail />
+            maysternyaknyg@gmail.com
+          </MailLink>
+        </RightContactLink>
+        <RightContactLink>
+          <Tel />
+          +380 986940143
+        </RightContactLink>
+        <RightContactLink>
+          <Geo />
+          м. Львів, вулиця Зелена 143 А
+        </RightContactLink>
+        <MagicPic src={Magic} alt="Magic" />
+        <MagicSmallPic src={SmallMagic} alt="Magic" />
       </Right>
     </ContactContainer>
   );

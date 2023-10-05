@@ -260,20 +260,21 @@ export const FormSmallInput = styled.input`
   }
 `;
 
-export const FormBigInput = styled.input`
+export const FormBigInput = styled.textarea`
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: #ab9284;
+  resize: none;
 
   width: 312px;
-  height: 142px;
+  height: 112px;
   border-radius: 20px;
   border: none;
   padding-left: 10px;
-
+  padding-top: 30px;
   margin-bottom: 32px;
 
   &:focus {
@@ -288,10 +289,12 @@ export const FormBigInput = styled.input`
     color: #ab9284;
 
     width: 500px;
-    height: 142px;
+    height: 112px;
     border-radius: 20px;
     border: none;
     padding-left: 10px;
+    padding-top: 30px;
+    resize: none;
 
     margin-bottom: 32px;
 
@@ -309,10 +312,12 @@ export const FormBigInput = styled.input`
     color: #ab9284;
 
     width: 300px;
-    height: 142px;
+    height: 112px;
     border-radius: 20px;
     border: none;
     padding-left: 10px;
+        padding-top: 30px;
+        resize: none;
 
     margin-bottom: 32px;
 
@@ -329,10 +334,12 @@ export const FormBigInput = styled.input`
     color: #ab9284;
 
     width: 430px;
-    height: 142px;
+    height: 112px;
     border-radius: 20px;
     border: none;
     padding-left: 24px;
+    padding-top: 30px;
+    resize: none;
 
     margin-bottom: 32px;
 
@@ -349,10 +356,12 @@ export const FormBigInput = styled.input`
     color: #ab9284;
 
     width: 512px;
-    height: 142px;
+    height: 112px;
     border-radius: 20px;
     border: none;
     padding-left: 24px;
+    padding-top: 30px;
+    resize: none;
 
     margin-bottom: 32px;
 
