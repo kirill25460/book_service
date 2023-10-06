@@ -4,6 +4,7 @@ import MainSection from '../../components/MainSection/MainSection';
 import Services from '../../components/Services/Services';
 import News from '../../components/News/News';
 import Contact from '../../components/Contact/Contact';
+import UpArrow from '../../components/UpArrow/UpArrow';
 
 const MainPage = () => {
   return (
@@ -13,6 +14,7 @@ const MainPage = () => {
       <Services />
       <Contact />
       <News />
+      <UpArrow/>
       <Footer />
     </div>
   );

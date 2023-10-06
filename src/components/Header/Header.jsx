@@ -101,7 +101,7 @@ const Header = () => {
               Контакти
             </SideNavItem>
           </StyldeLink>
-          <StyldeLink>
+          <StyldeLink to="/calc">
             <SideNavButton>Калькулятор</SideNavButton>
           </StyldeLink>
         </SideMenu>
