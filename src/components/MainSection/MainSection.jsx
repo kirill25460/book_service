@@ -6,6 +6,8 @@ import {
   MainPic,
   MainMobPic,
   ParallaxPic,
+  ParallaxContainer,
+  Main,
   MainPar,
 } from './MainSection.styled';
 import man from 'images/wizard.png';
@@ -15,33 +17,14 @@ import { MouseParallax } from 'react-just-parallax';
 import './Parallax.css'
 
 const MainSection = () => {
-  // constructor=(props)=>{
-  //   super(props);
-  //   this.state = {
-  //     windowWidth: window.innerWidth,
-  //   };
-  // }
-
-  // componentDidMount=() =>{
-  //   window.addEventListener('resize', this.handleWindowResize);
-  // }
-
-  // componentWillUnmount=()=> {
-  //   window.removeEventListener('resize', this.handleWindowResize);
-  // }
-
-  // handleWindowResize = () => {
-  //   this.setState({ windowWidth: window.innerWidth });
-  // };
-
-  // render(){
-  //   const { windowWidth } = this.state;
-  //   const isParallaxActive = windowWidth >= 960;
-  return (
+   return (
     <MainContainer id="main">
-    <MouseParallax >
+      <ParallaxContainer>
+      <MouseParallax >
       <ParallaxPic src={trydetail} alt="detail"/>
     </MouseParallax>
+      </ParallaxContainer>
+      <Main>
       <MainLeft>
         <MainText>Книга, це книга, люби кого? Книгу.</MainText>
         <MainPar>Книга, книга книга книга, книжки? Книга! Книга книга, книга. Книга, книга книга книга, книжки? Книга! </MainPar>
@@ -49,6 +32,7 @@ const MainSection = () => {
       </MainLeft>
       <MainPic src={man} alt="Man" />
       <MainMobPic src={mobman} alt="Man"/>
+      </Main>
     </MainContainer>
   );
   };

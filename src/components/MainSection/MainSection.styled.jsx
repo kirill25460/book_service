@@ -10,21 +10,38 @@ export const MainContainer = styled.div`
   background-position: center center;
   width: auto;
   height: 393px;
-  display: flex;
+
 
   @media screen and (min-width: 950px) {
     background-image: url(${FonImg});
     height: 730px;
-    align-items: center;
-    justify-content: center;
+   
   }
 `;
 
 export const MainLeft = styled.div`
 padding-left:15px;
+@media screen and (min-width: 430px){padding-left:50px;}
 @media screen and (min-width: 950px) {
-  padding-right: 350px;
+  padding-right: 300px;
+  padding-left:200px;
 }
+
+`;
+export const Main = styled.div`
+display: flex;
+@media screen and (min-width: 950px) {
+align-items: center;
+justify-content: center;}`;
+
+
+export const ParallaxContainer = styled.div`
+width:0;
+
+@media screen and (min-width: 950px) {
+position:absolute;
+  width: 100%;
+  }
 
 `;
 
@@ -50,6 +67,8 @@ padding-top: 25px;
 
 export const MainPar = styled.p`
   margin: 0;
+  width:165px;
+
   color: #af9a91;
   font-family: DM Sans;
   font-style: normal;
@@ -78,6 +97,7 @@ export const MainButton = styled.button`
   z-index: 2;
   width: 131px;
 height: 34px;
+box-shadow: 4px 4px 31px #ff8956;
   position: relative;
   font-size: 9px;
 font-weight: 500;
@@ -115,8 +135,14 @@ export const MainMobPic = styled.img`
 
 position: absolute;
 right: 0;
+top:80px;
 width: 245px;
-height: 345px;
+height: 383px;
+@media screen and (min-width: 430px){
+  right: 0;
+  top:120px;
+
+}
 @media screen and (min-width: 950px) {
   display: none;
 }
