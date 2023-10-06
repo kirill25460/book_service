@@ -58,22 +58,46 @@ const Header = () => {
         </BurgerMenu>
         <SideMenu ref={menuRef} className={isOpen ? 'open' : ''}>
           <StyldeLink>
-            <SideNavItem onClick={() => scrollToSection('main')}>
+            <SideNavItem
+              onClick={() =>
+                setTimeout(() => {
+                  scrollToSection('main');
+                }, 10)
+              }
+            >
               Головна
             </SideNavItem>
           </StyldeLink>
           <StyldeLink>
-            <SideNavItem onClick={() => scrollToSection('products')}>
+            <SideNavItem
+              onClick={() =>
+                setTimeout(() => {
+                  scrollToSection('products');
+                }, 10)
+              }
+            >
               Продукція та послуги
             </SideNavItem>
           </StyldeLink>
           <StyldeLink>
-            <SideNavItem onClick={() => scrollToSection('news')}>
+            <SideNavItem
+              onClick={() =>
+                setTimeout(() => {
+                  scrollToSection('news');
+                }, 10)
+              }
+            >
               Новини
             </SideNavItem>
           </StyldeLink>
           <StyldeLink>
-            <SideNavItem onClick={() => scrollToSection('contacts')}>
+            <SideNavItem
+              onClick={() =>
+                setTimeout(() => {
+                  scrollToSection('contacts');
+                }, 10)
+              }
+            >
               Контакти
             </SideNavItem>
           </StyldeLink>
@@ -89,15 +113,35 @@ const Header = () => {
       <Right>
         <NavList>
           <StyldeLink to="/">
-            <NavItem onClick={() => scrollToSection('products')}>
+            <NavItem
+              onClick={() =>
+                setTimeout(() => {
+                  scrollToSection('products');
+                }, 10)
+              }
+            >
               Продукція та послуги
             </NavItem>
           </StyldeLink>
           <StyldeLink to="/">
-            <NavItem onClick={() => scrollToSection('news')}>Новини</NavItem>
+            <NavItem
+              onClick={() =>
+                setTimeout(() => {
+                  scrollToSection('news');
+                }, 10)
+              }
+            >
+              Новини
+            </NavItem>
           </StyldeLink>
           <StyldeLink to="/">
-            <NavItem onClick={() => scrollToSection('contacts')}>
+            <NavItem
+              onClick={() =>
+                setTimeout(() => {
+                  scrollToSection('contacts');
+                }, 10)
+              }
+            >
               Контакти
             </NavItem>
           </StyldeLink>
