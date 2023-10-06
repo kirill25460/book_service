@@ -10,6 +10,6 @@ export const ArrowDiv = styled.div`
 
 export const ArrowImg = styled(FaArrowAltCircleUp)`
 width: 50px;
-height: 50px;
-    color: #5c3d2e;
+height: 160px;
+    color: #c2744d;
 `
