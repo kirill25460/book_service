@@ -57,7 +57,7 @@ const Header = () => {
           <MenuIcon onClick={toggleMenu} />
         </BurgerMenu>
         <SideMenu ref={menuRef} className={isOpen ? 'open' : ''}>
-          <StyldeLink>
+          <StyldeLink to="/">
             <SideNavItem
               onClick={() =>
                 setTimeout(() => {
@@ -68,7 +68,7 @@ const Header = () => {
               Головна
             </SideNavItem>
           </StyldeLink>
-          <StyldeLink>
+          <StyldeLink to="/">
             <SideNavItem
               onClick={() =>
                 setTimeout(() => {
@@ -79,7 +79,7 @@ const Header = () => {
               Продукція та послуги
             </SideNavItem>
           </StyldeLink>
-          <StyldeLink>
+          <StyldeLink to="/">
             <SideNavItem
               onClick={() =>
                 setTimeout(() => {
@@ -90,7 +90,7 @@ const Header = () => {
               Новини
             </SideNavItem>
           </StyldeLink>
-          <StyldeLink>
+          <StyldeLink to="/">
             <SideNavItem
               onClick={() =>
                 setTimeout(() => {
