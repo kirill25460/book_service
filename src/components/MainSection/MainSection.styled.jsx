@@ -39,7 +39,7 @@ export const ParallaxContainer = styled.div`
 width:0;
 
 @media screen and (min-width: 950px) {
-position:absolute;
+
   width: 100%;
   }
 

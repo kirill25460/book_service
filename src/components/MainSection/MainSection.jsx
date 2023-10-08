@@ -14,7 +14,7 @@ import man from 'images/wizard.png';
 import mobman from "images/mob-wizard.png";
 import trydetail from "images/group-gear.png";
 import { MouseParallax } from 'react-just-parallax';
-import './Parallax.css'
+
 
 const MainSection = () => {
    return (
