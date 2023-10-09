@@ -9,6 +9,7 @@ import {
   Main,
   MainPar,
   Wrap,
+  StyledLink,
 } from './MainSection.styled';
 import man from 'images/wizard.png';
 import mobman from 'images/mob-wizard.png';
@@ -31,21 +32,20 @@ const MainSection = () => {
         }}
       ></Main>
       <Wrap>
-      <MainLeft>
-        <MainText>Книга, це книга, люби кого? Книгу.</MainText>
-        <MainPar>
-          Книга, книга книга книга, книжки? Книга! Книга книга, книга. Книга,
-          книга книга книга, книжки? Книга!{' '}
-        </MainPar>
-        <MainButton>Галерея наших робіт</MainButton>
-      </MainLeft>
-     
-      <MainPic src={man} alt="Man" />
-      <MainMobPic src={mobman} alt="Man" />
-    
+        <MainLeft>
+          <MainText>Книга, це книга, люби кого? Книгу.</MainText>
+          <MainPar>
+            Книга, книга книга книга, книжки? Книга! Книга книга, книга. Книга,
+            книга книга книга, книжки? Книга!{' '}
+          </MainPar>
+          <StyledLink to='/gallery'>
+            <MainButton>Галерея наших робіт</MainButton>
+          </StyledLink>
+        </MainLeft>
+
+        <MainPic src={man} alt="Man" />
+        <MainMobPic src={mobman} alt="Man" />
       </Wrap>
-     
-    
     </MainContainer>
   );
 };

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import FonImg from '../../images/Rectangle.png';
-import MobBg from '../../images/mob-main-bg.png'
+import MobBg from '../../images/mob-main-bg.png';
+import { NavLink } from 'react-router-dom';
 export const MainContainer = styled.div`
   overflow: hidden;
   background-image: url(${MobBg});
@@ -114,6 +115,7 @@ line-height: 18px;
   align-items: center;
   justify-content: center;
   font-style: normal;
+  cursor: pointer;
   @media screen and (min-width: 950px) {
     font-weight: 700;
     font-size: 18px;
@@ -158,3 +160,7 @@ display:flex;
 }
 
 `;
+
+export const StyledLink = styled(NavLink)`
+  text-decoration: none;
+`
