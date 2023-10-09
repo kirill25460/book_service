@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { FiArrowRight } from 'react-icons/fi';
+// import {MdKeyboardArrowDown} from 'react-icons/md'
 
 export const MainTitle = styled.p`
   font-family: 'Raleway';
@@ -118,19 +119,62 @@ export const LeftSubText = styled.p`
   margin: 0;
 `;
 
-export const LeftBigSelect = styled.select`
-  position: relative;
-  display: inline-block;
-  background-color: white;
-  border: 2px solid #e0c097;
-  padding: 8px;
-  border-radius: 32px;
-  width: 420px;
-  height: 64px;
-  font-size: 16px;
+export const RadioButtonContainerFormat = styled.div`
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 50px;
+`;
+
+export const RadioLabel = styled.label`
+  display: flex;
+  align-items: center;
+  font-family: 'DM Sans', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 18px;
+  color: #8c5e48;
+  cursor: pointer;
+  margin-right: 16px;
+`;
+
+export const RadioInput = styled.input`
+  width: 20px;
+  height: 20px;
+  border: 1px solid #e0c097;
+  border-radius: 50%;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
-  cursor: pointer;
   outline: none;
+  cursor: pointer;
+  margin-right: 10px;
+
+  &:checked {
+    background: #b85c38;
+  }
 `;
+
+export const RadioButtonContainerText = styled.div`
+  margin-top: 20px;
+  margin-bottom: 50px;
+`;
+
+export const RadioLabelText = styled.label`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-family: 'DM Sans', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  color: #8c5e48;
+  margin: 0;
+  cursor: pointer;
+  margin-bottom: 11px;
+`;
+
+export const RadioSpan = styled.span`
+    
+`
