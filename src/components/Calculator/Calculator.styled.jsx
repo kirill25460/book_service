@@ -16,20 +16,48 @@ export const MainTitle = styled.p`
 export const MainContainer = styled.div`
   margin: 0 auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  @media screen and (min-width: 1000px) {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
 `;
 
 export const Left = styled.div`
-  width: 435px;
-  margin-right: 220px;
+  margin-right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  @media screen and (min-width: 1000px) {
+    display: block;
+    margin-right: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 220px;
+  }
 `;
 
 export const Right = styled.div`
+  margin: 80px auto 90px;
   background-color: #e5d2c8;
   padding: 23px 27px 40px;
   border-radius: 37px;
   text-align: center;
+  height: fit-content;
+  width: fit-content;
+  @media screen and (min-width: 1000px) {
+    margin: 0;
+    background-color: #e5d2c8;
+    padding: 23px 27px 40px;
+    border-radius: 37px;
+    text-align: center;
+    height: fit-content;
+    width: fit-content;
+  }
 `;
 
 export const RightMainText = styled.p`
@@ -163,7 +191,6 @@ export const RadioButtonContainerText = styled.div`
 export const RadioLabelText = styled.label`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   font-family: 'DM Sans', sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -175,6 +202,65 @@ export const RadioLabelText = styled.label`
   margin-bottom: 11px;
 `;
 
-export const RadioSpan = styled.span`
-    
-`
+export const RadioSpan = styled.p`
+  margin: 0;
+  width: 390px;
+`;
+
+export const RangeContainer = styled.div`
+  width: 600px;
+  height: 5px;
+  background: linear-gradient(to right, #8c5e48, #e0c097);
+  position: relative;
+  border-radius: 2.5px;
+  margin-left: -15px;
+`;
+
+export const RangeLabels = styled.div`
+  display: flex;
+  margin-left: -15px;
+  justify-content: space-between;
+  font-family: 'DM Sans', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 30px;
+  color: #8c5e48;
+  padding-top: 10px;
+`;
+
+export const RangeInput = styled.input`
+  width: 100%;
+  height: 16px; /* Увеличиваем высоту инпута */
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  background: transparent;
+  cursor: pointer;
+
+  &::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #8c5e48;
+    border: 2px solid white;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
+`;
+
+export const FirstRangeCont = styled.div`
+  margin-top: 23px;
+  margin-bottom: 50px;
+`;
+
+export const RangeMainText = styled.div`
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  color: #8c5e48;
+`;
