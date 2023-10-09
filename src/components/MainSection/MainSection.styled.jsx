@@ -10,7 +10,7 @@ export const MainContainer = styled.div`
   background-position: center center;
   width: auto;
   height: 393px;
-
+  position: relative;
 
   @media screen and (min-width: 950px) {
     background-image: url(${FonImg});
@@ -23,27 +23,31 @@ export const MainLeft = styled.div`
 padding-left:15px;
 @media screen and (min-width: 430px){padding-left:50px;}
 @media screen and (min-width: 950px) {
-  padding-right: 300px;
-  padding-left:200px;
+  position: absolute;
+  left:10px;
 }
-
+@media screen and (min-width: 1440px) {position:relative; }
+@media screen and (min-width: 1830px) {
+  
+  padding-right:250px;
+}
 `;
 export const Main = styled.div`
-display: flex;
+display:none;
 @media screen and (min-width: 950px) {
-align-items: center;
-justify-content: center;}`;
-
-
-export const ParallaxContainer = styled.div`
-width:0;
-
-@media screen and (min-width: 950px) {
-
+  display:inline-block;
+background-size: cover;
   width: 100%;
-  }
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: transform 0.4s ease-out;  }
+  
+  `
 
-`;
+
+
 
 export const MainText = styled.h2`
   font-family: 'Raleway';
@@ -122,37 +126,35 @@ export const MainPic = styled.img`
 display:none;
 @media screen and (min-width: 950px) {
   display: block;
-  width: 755px;
+  width: 590px;
   height: 731px;
-  margin-right: 120px;
+  margin-left: 400px;
   z-index: 2;
-  position: relative;
-}
  
+}
+@media screen and (min-width: 1440px) {margin:0;
+  width:745px;}
 `;
 
 export const MainMobPic = styled.img`
 
 position: absolute;
 right: 0;
-top:80px;
+top:10px;
 width: 245px;
 height: 383px;
-@media screen and (min-width: 430px){
-  right: 0;
-  top:120px;
-
-}
 @media screen and (min-width: 950px) {
   display: none;
 }
 `;
 
-export const ParallaxPic = styled.img`
-display: none;
-  @media screen and (min-width: 950px) {
-    position: absolute;
-    display:inline-block;
-  z-index: 1;
-  }
+
+
+export const Wrap = styled.div`
+display:flex;
+@media screen and (min-width: 950px) {
+  align-items: center;
+  justify-content: center;
+}
+
 `;
