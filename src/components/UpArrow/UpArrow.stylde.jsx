@@ -6,6 +6,7 @@ export const ArrowDiv = styled.div`
   bottom: 40px;
   right: 40px;
   cursor: pointer;
+  z-index: 999;
 `;
 
 export const ArrowImg = styled(FaArrowAltCircleUp)`
