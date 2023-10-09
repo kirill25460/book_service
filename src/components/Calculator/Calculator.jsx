@@ -22,7 +22,8 @@ import {
   RangeLabels,
   RangeInput,
   FirstRangeCont,
-  RangeMainText
+  RangeMainText,
+  RadioInput2
 } from './Calculator.styled';
 import Select from 'react-select';
 
@@ -35,8 +36,8 @@ const Calculator = () => {
 
   const options2 = [
     { value: 'option4', label: 'офсетний 170 г/м2' },
-    { value: 'option5', label: 'Опция 2' },
-    { value: 'option6', label: 'Опция 3' },
+    { value: 'option5', label: 'Опция 5' },
+    { value: 'option6', label: 'Опция 6' },
   ];
 
   const customStyles = {
@@ -56,6 +57,10 @@ const Calculator = () => {
       marginTop: '15px',
       marginBottom: '50px',
       marginLeft: '-13px',
+
+      '@media (max-width: 740px)': {
+        width: '300px', // Изменяем ширину при необходимости
+      },
     }),
     singleValue: provided => ({
       ...provided,
@@ -98,14 +103,24 @@ const Calculator = () => {
   };
 
   const [selectedOption, setSelectedOption] = useState('');
+  const [selectedOption2, setSelectedOption2] = useState('');
   const [value, setValue] = useState(100);
+  const [value2, setValue2] = useState(100);
 
   const handleRadioChange = event => {
     setSelectedOption(event.target.value);
   };
 
+  const handleRadioChange2 = event => {
+    setSelectedOption2(event.target.value);
+  };
+
   const handleChange = e => {
     setValue(e.target.value);
+  };
+
+  const handleChange1 = e => {
+    setValue2(e.target.value);
   };
 
   return (
@@ -161,12 +176,12 @@ const Calculator = () => {
 
           <RadioButtonContainerText>
             <RadioLabelText>
-              <RadioInput
+              <RadioInput2
                 type="radio"
-                name="option"
-                value="option1"
-                checked={selectedOption === 'option4'}
-                onChange={handleRadioChange}
+                name="option2"
+                value="option4"
+                checked={selectedOption2 === 'option4'}
+                onChange={handleRadioChange2}
               />
               <RadioSpan>
                 Тверда кольорова палітурка 7БЦ. Шиття блоку на нитку. Форзац без
@@ -174,12 +189,12 @@ const Calculator = () => {
               </RadioSpan>
             </RadioLabelText>
             <RadioLabelText>
-              <RadioInput
+              <RadioInput2
                 type="radio"
-                name="option"
-                value="option1"
-                checked={selectedOption === 'option5'}
-                onChange={handleRadioChange}
+                name="option2"
+                value="option5"
+                checked={selectedOption2 === 'option5'}
+                onChange={handleRadioChange2}
               />
               <RadioSpan>
                 М'яка кольорова обкладинка з ламінацією. Клейове скріплення
@@ -226,13 +241,13 @@ const Calculator = () => {
                 min="3"
                 max="300"
                 step="1"
-                value={value}
-                onChange={handleChange}
+                value={value2}
+                onChange={handleChange1}
               />
             </RangeContainer>
             <RangeLabels>
               <div>3 шт</div>
-              <RangeMainText>{value}</RangeMainText>
+              <RangeMainText>{value2}</RangeMainText>
               <div>300 шт</div>
             </RangeLabels>
           </FirstRangeCont>

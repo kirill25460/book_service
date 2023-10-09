@@ -183,6 +183,23 @@ export const RadioInput = styled.input`
   }
 `;
 
+export const RadioInput2 = styled.input`
+  width: 20px;
+  height: 20px;
+  border: 1px solid #e0c097;
+  border-radius: 50%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  outline: none;
+  cursor: pointer;
+  margin-right: 10px;
+
+  &:checked {
+    background: #b85c38;
+  }
+`;
+
 export const RadioButtonContainerText = styled.div`
   margin-top: 20px;
   margin-bottom: 50px;
@@ -204,16 +221,30 @@ export const RadioLabelText = styled.label`
 
 export const RadioSpan = styled.p`
   margin: 0;
-  width: 390px;
+  width: 318px;
+  text-align: center;
+  @media screen and (min-width: 670px) {
+    margin: 0;
+    width: 390px;
+    text-align: left;
+  }
 `;
 
 export const RangeContainer = styled.div`
-  width: 600px;
+  width: 300px;
   height: 5px;
   background: linear-gradient(to right, #8c5e48, #e0c097);
   position: relative;
   border-radius: 2.5px;
   margin-left: -15px;
+  @media screen and (min-width: 670px) {
+    width: 600px;
+    height: 5px;
+    background: linear-gradient(to right, #8c5e48, #e0c097);
+    position: relative;
+    border-radius: 2.5px;
+    margin-left: -15px;
+  }
 `;
 
 export const RangeLabels = styled.div`
