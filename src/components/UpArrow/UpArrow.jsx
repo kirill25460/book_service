@@ -31,7 +31,7 @@ const UpArrow = () => {
     <ArrowDiv
       id="scroll-to-top"
       onClick={scrollToTop}
-      style={{ display: isVisible ? 'block' : 'none' }}
+      style={{ opacity: isVisible ? 1 : 0 }}
     >
       <ArrowImg />
     </ArrowDiv>

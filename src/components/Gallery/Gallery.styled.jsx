@@ -140,6 +140,7 @@ export const LeftBtn = styled.button`
   cursor: pointer;
 
   &:hover {
+    transition: background-color 0.5s ease;
     background-color: #b85c38;
     color: #ffffff;
   }
@@ -164,6 +165,7 @@ export const RightBtn = styled.button`
   cursor: pointer;
 
   &:hover {
+    transition: background-color 0.5s ease;
     background-color: transparent;
     color: #5e3f2f;
     border: 2px solid #e0c097;

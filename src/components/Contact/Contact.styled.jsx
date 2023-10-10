@@ -316,8 +316,8 @@ export const FormBigInput = styled.textarea`
     border-radius: 20px;
     border: none;
     padding-left: 10px;
-        padding-top: 30px;
-        resize: none;
+    padding-top: 30px;
+    resize: none;
 
     margin-bottom: 32px;
 
@@ -387,7 +387,12 @@ export const FormButton = styled.button`
   font-weight: 700;
   font-size: 18px;
   line-height: 18px;
-  /* identical to box height, or 100% */
+  cursor: pointer;
+
+  &:hover {
+    transition: background-color 0.5s ease; /* Применяем переход для background-color */
+    background-color: #cc805a;
+  }
 `;
 
 export const Arrow = styled(FiArrowRight)`
@@ -449,7 +454,7 @@ export const RightSubTitle = styled.p`
 export const RightContactLink = styled.a`
   display: flex;
   align-items: center;
-  font-family: 'DM Sans';
+  font-family: 'DM Sans', sans-serif !important;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;

@@ -7,6 +7,8 @@ export const ArrowDiv = styled.div`
   right: 40px;
   cursor: pointer;
   z-index: 999;
+  opacity: 0; /* Начальное значение прозрачности */
+  transition: opacity 0.5s; /* Длительность и тип анимации */
 `;
 
 export const ArrowImg = styled(FaArrowAltCircleUp)`
