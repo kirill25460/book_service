@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { GoArrowRight } from 'react-icons/go';
+import { NavLink } from 'react-router-dom';
 
 export const ServicesContainer = styled.div`
   margin: 28px 0 100px 0;
@@ -170,3 +171,7 @@ export const Arrow = styled(GoArrowRight)`
   height: 20px;
   color: #b85c38;
 `;
+
+export const StyledLink = styled(NavLink)`
+  text-decoration: none;
+`

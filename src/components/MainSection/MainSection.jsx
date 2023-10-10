@@ -38,11 +38,10 @@ const MainSection = () => {
             Книга, книга книга книга, книжки? Книга! Книга книга, книга. Книга,
             книга книга книга, книжки? Книга!{' '}
           </MainPar>
-          <StyledLink to='/gallery'>
+          <StyledLink to='/ourGallery'>
             <MainButton>Галерея наших робіт</MainButton>
           </StyledLink>
         </MainLeft>
-
         <MainPic src={man} alt="Man" />
         <MainMobPic src={mobman} alt="Man" />
       </Wrap>

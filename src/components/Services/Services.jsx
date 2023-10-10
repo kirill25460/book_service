@@ -11,6 +11,7 @@ import {
   MoreContainer,
   MoreText,
   Arrow,
+  StyledLink,
 } from './Services.styled';
 
 import book1 from '../../images/book1.png';
@@ -78,10 +79,12 @@ const Services = () => {
                 <ServicesItemMainText>{mainText}</ServicesItemMainText>
                 <ServicesItemSubText>{subText}</ServicesItemSubText>
               </div>
-              <MoreContainer>
-                <MoreText>Дізнатись більше</MoreText>
-                <Arrow />
-              </MoreContainer>
+              <StyledLink to="/gallery">
+                <MoreContainer>
+                  <MoreText>Дізнатись більше</MoreText>
+                  <Arrow />
+                </MoreContainer>
+              </StyledLink>
             </ServicesItem>
           );
         })}
