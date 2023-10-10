@@ -160,7 +160,7 @@ export const FormText = styled.p`
 `;
 
 export const FormSmallInput = styled.input`
-  font-family: 'Raleway', sans-serif;
+  font-family: 'DM Sans', sans-serif !important;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
