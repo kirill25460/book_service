@@ -95,7 +95,7 @@ export const MainButton = styled.button`
   z-index: 2;
   width: 131px;
   height: 34px;
-  box-shadow: 4px 4px 31px #ff8956;
+  
   position: relative;
   font-size: 9px;
   font-weight: 500;
@@ -109,6 +109,11 @@ export const MainButton = styled.button`
   justify-content: center;
   font-style: normal;
   cursor: pointer;
+
+  &:hover{
+    transition: box-shadow 0.5s ease;
+    box-shadow: 4px 4px 31px #ff8956;
+  }
   @media screen and (min-width: 950px) {
     font-weight: 700;
     font-size: 18px;
