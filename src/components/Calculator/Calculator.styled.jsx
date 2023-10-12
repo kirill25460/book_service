@@ -177,9 +177,19 @@ export const RadioInput = styled.input`
   outline: none;
   cursor: pointer;
   margin-right: 10px;
+  position: relative;
 
   &:checked {
-    background: #b85c38;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 14px;
+      height: 14px;
+      background: #b85c38;
+      border-radius: 50%;
+    }
   }
 `;
 
@@ -194,9 +204,20 @@ export const RadioInput2 = styled.input`
   outline: none;
   cursor: pointer;
   margin-right: 10px;
+  position: relative;
+  
 
   &:checked {
-    background: #b85c38;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 2px;
+      left: 2px;
+      width: 14px;
+      height: 14px;
+      background: #b85c38;
+      border-radius: 50%;
+    }
   }
 `;
 
@@ -279,6 +300,8 @@ export const RangeInput = styled.input`
     border: 2px solid white;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
     cursor: pointer;
+    position: relative;
+    top: -5px;
   }
 `;
 
