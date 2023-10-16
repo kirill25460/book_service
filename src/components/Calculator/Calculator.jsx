@@ -31,11 +31,11 @@ const Calculator = () => {
   const options = [
     { value: 'option1', label: 'Калькулятор для чорно-білих книг' },
     { value: 'option2', label: 'Опция 2' },
-    { value: 'option3', label: 'Опция 3' },
+
   ];
 
   const options2 = [
-    { value: 'option4', label: 'офсетний 170 г/м2' },
+    { value: '0.3', label: 'офсетний 170 г/м2' },
     { value: 'option5', label: 'Опция 5' },
     { value: 'option6', label: 'Опция 6' },
   ];
@@ -143,9 +143,9 @@ const Calculator = () => {
             <RadioLabel>
               <RadioInput
                 type="radio"
-                name="option"
-                value="option1"
-                checked={selectedOption === 'option1'}
+                name="A4"
+                value="2"// умножаем на 2
+                checked={selectedOption === '2'}
                 onChange={handleRadioChange}
               />
               A4
@@ -153,9 +153,9 @@ const Calculator = () => {
             <RadioLabel>
               <RadioInput
                 type="radio"
-                name="option"
-                value="option2"
-                checked={selectedOption === 'option2'}
+                name="A5"
+                value="1"
+                checked={selectedOption === '1'}
                 onChange={handleRadioChange}
               />
               A5
@@ -163,9 +163,9 @@ const Calculator = () => {
             <RadioLabel>
               <RadioInput
                 type="radio"
-                name="option"
-                value="option3"
-                checked={selectedOption === 'option3'}
+                name="A6"// делим на 2
+                value="2"
+                checked={selectedOption === '2'}
                 onChange={handleRadioChange}
               />
               A6
@@ -178,9 +178,9 @@ const Calculator = () => {
             <RadioLabelText>
               <RadioInput2
                 type="radio"
-                name="option2"
-                value="option4"
-                checked={selectedOption2 === 'option4'}
+                name="thread"
+                value="30"
+                checked={selectedOption2 === '30'}
                 onChange={handleRadioChange2}
               />
               <RadioSpan>
@@ -191,9 +191,9 @@ const Calculator = () => {
             <RadioLabelText>
               <RadioInput2
                 type="radio"
-                name="option2"
-                value="option5"
-                checked={selectedOption2 === 'option5'}
+                name="glue"
+                value="60"
+                checked={selectedOption2 === '60'}
                 onChange={handleRadioChange2}
               />
               <RadioSpan>
@@ -257,7 +257,8 @@ const Calculator = () => {
           <RightMainText>Фінальна вартість</RightMainText>
           <RightInputContainer>
             <RightInputText>Ціна за 1 шт ₴ </RightInputText>
-            <RightInput />
+            <RightInput type="text" value={value} name="name" readonly />
+            
           </RightInputContainer>
           <RightInputContainer>
             <RightInputText>Сума за наклад ₴ </RightInputText>
