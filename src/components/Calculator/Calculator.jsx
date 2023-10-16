@@ -138,8 +138,8 @@ const Calculator = () => {
       default:
     }
 
-    setFullPrice((defPrice * value2).toFixed(2));
-  },[selectedOption, defPrice, value2, selectedOption2]);
+    setFullPrice((defPrice * value2 * value).toFixed(2));
+  },[selectedOption, defPrice, value2, selectedOption2, value]);
 
   const handleRadioChange2 = event => {
     setSelectedOption2(event.target.value);
