@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   MainTitle,
   MainContainer,
@@ -23,15 +23,13 @@ import {
   RangeInput,
   FirstRangeCont,
   RangeMainText,
-  RadioInput2
+  RadioInput2,
 } from './Calculator.styled';
 import Select from 'react-select';
 
 const Calculator = () => {
   const options = [
     { value: 'option1', label: 'Калькулятор для чорно-білих книг' },
-    { value: 'option2', label: 'Опция 2' },
-
   ];
 
   const options2 = [
@@ -102,14 +100,46 @@ const Calculator = () => {
     }),
   };
 
-  const [selectedOption, setSelectedOption] = useState('');
-  const [selectedOption2, setSelectedOption2] = useState('');
+  const [selectedOption, setSelectedOption] = useState('1');
+  const [selectedOption2, setSelectedOption2] = useState('30');
   const [value, setValue] = useState(100);
   const [value2, setValue2] = useState(100);
+
+  const [defPrice, setDefPrice] = useState('');
+  const [fullPrice, setFullPrice] = useState('');
 
   const handleRadioChange = event => {
     setSelectedOption(event.target.value);
   };
+
+  useEffect(() => {
+    switch (selectedOption) {
+      case '1':
+        if (selectedOption2 === '30') {
+          setDefPrice('120.6');
+        } else {
+          setDefPrice('60.6');
+        }
+        break;
+      case '2':
+        if (selectedOption2 === '30') {
+          setDefPrice('60.3');
+        } else {
+          setDefPrice('30.3');
+        }
+        break;
+      case '3':
+        if (selectedOption2 === '30') {
+          setDefPrice('30.15');
+        } else {
+          setDefPrice('15.15');
+        }
+        break;
+      default:
+    }
+
+    setFullPrice((defPrice * value2).toFixed(2));
+  },[selectedOption, defPrice, value2, selectedOption2]);
 
   const handleRadioChange2 = event => {
     setSelectedOption2(event.target.value);
@@ -144,8 +174,8 @@ const Calculator = () => {
               <RadioInput
                 type="radio"
                 name="A4"
-                value="2"// умножаем на 2
-                checked={selectedOption === '2'}
+                value="1" // умножаем на 2
+                checked={selectedOption === '1'}
                 onChange={handleRadioChange}
               />
               A4
@@ -154,8 +184,8 @@ const Calculator = () => {
               <RadioInput
                 type="radio"
                 name="A5"
-                value="1"
-                checked={selectedOption === '1'}
+                value="2"
+                checked={selectedOption === '2'}
                 onChange={handleRadioChange}
               />
               A5
@@ -163,9 +193,9 @@ const Calculator = () => {
             <RadioLabel>
               <RadioInput
                 type="radio"
-                name="A6"// делим на 2
-                value="2"
-                checked={selectedOption === '2'}
+                name="A6" // делим на 2
+                value="3"
+                checked={selectedOption === '3'}
                 onChange={handleRadioChange}
               />
               A6
@@ -257,12 +287,11 @@ const Calculator = () => {
           <RightMainText>Фінальна вартість</RightMainText>
           <RightInputContainer>
             <RightInputText>Ціна за 1 шт ₴ </RightInputText>
-            <RightInput type="text" value={value} name="name" readonly />
-            
+            <RightInput placeholder='' value={defPrice} readOnly />
           </RightInputContainer>
           <RightInputContainer>
             <RightInputText>Сума за наклад ₴ </RightInputText>
-            <RightInput />
+            <RightInput placeholder='' value={fullPrice} readOnly/>
           </RightInputContainer>
           <RightButton>
             Оформити замовлення
