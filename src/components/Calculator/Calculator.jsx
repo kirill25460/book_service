@@ -33,9 +33,9 @@ const Calculator = () => {
   ];
 
   const options2 = [
-    { value: '0.3', label: 'офсетний 170 г/м2' },
-    { value: 'option5', label: 'Опция 5' },
-    { value: 'option6', label: 'Опция 6' },
+    { value: 0.3, label: 'офсетний 170 г/м2' },
+    { value: 0.4, label: 'Опция 5' },
+    { value: 0.5, label: 'Опция 6' },
   ];
 
   const customStyles = {
@@ -101,7 +101,8 @@ const Calculator = () => {
   };
 
   const [selectedOption, setSelectedOption] = useState('1');
-  const [selectedOption2, setSelectedOption2] = useState('30');
+  const [selectedOption2, setSelectedOption2] = useState('60');
+  const [selectedPaperOption2, setSelectedPaperOption2] = useState(0);
   const [value, setValue] = useState(100);
   const [value2, setValue2] = useState(100);
 
@@ -115,31 +116,20 @@ const Calculator = () => {
   useEffect(() => {
     switch (selectedOption) {
       case '1':
-        if (selectedOption2 === '30') {
-          setDefPrice('120.6');
-        } else {
-          setDefPrice('60.6');
-        }
+        setDefPrice((((value2 * selectedPaperOption2)+parseInt(selectedOption2))*2).toFixed(2));
         break;
       case '2':
-        if (selectedOption2 === '30') {
-          setDefPrice('60.3');
-        } else {
-          setDefPrice('30.3');
-        }
+        setDefPrice(((value2 * selectedPaperOption2)+parseInt(selectedOption2)).toFixed(2));
         break;
       case '3':
-        if (selectedOption2 === '30') {
-          setDefPrice('30.15');
-        } else {
-          setDefPrice('15.15');
-        }
+        setDefPrice((((value2 * selectedPaperOption2)+parseInt(selectedOption2))/2).toFixed(2));
         break;
       default:
     }
 
-    setFullPrice((defPrice * value2 * value).toFixed(2));
-  },[selectedOption, defPrice, value2, selectedOption2, value]);
+
+    setFullPrice((defPrice * value).toFixed(2));
+  },[selectedOption, defPrice, value2, selectedOption2, value, selectedPaperOption2]);
 
   const handleRadioChange2 = event => {
     setSelectedOption2(event.target.value);
@@ -151,6 +141,10 @@ const Calculator = () => {
 
   const handleChange1 = e => {
     setValue2(e.target.value);
+  };
+
+  const handleChangePaper = selectedOption => {
+    setSelectedPaperOption2(selectedOption.value);
   };
 
   return (
@@ -209,8 +203,8 @@ const Calculator = () => {
               <RadioInput2
                 type="radio"
                 name="thread"
-                value="30"
-                checked={selectedOption2 === '30'}
+                value="60"
+                checked={selectedOption2 === "60"}
                 onChange={handleRadioChange2}
               />
               <RadioSpan>
@@ -222,8 +216,8 @@ const Calculator = () => {
               <RadioInput2
                 type="radio"
                 name="glue"
-                value="60"
-                checked={selectedOption2 === '60'}
+                value="30"
+                checked={selectedOption2 === "30"}
                 onChange={handleRadioChange2}
               />
               <RadioSpan>
@@ -240,6 +234,8 @@ const Calculator = () => {
             styles={customStyles2}
             placeholder="Оберіть..."
             isSearchable={false}
+            value={options2.value}
+            onChange={handleChangePaper}
           />
 
           <LeftMainText>Наклад (кількість шт)</LeftMainText>
