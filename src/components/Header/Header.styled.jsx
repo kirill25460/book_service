@@ -6,12 +6,12 @@ export const HeaderContainer = styled.div`
   display: flex;
   height: 70px;
   justify-content: center;
-  @media screen and (min-width: 430px) {
+  @media screen and (min-width: 446px) {
     display: flex;
     height: 110px;
     justify-content: center;
   }
-  @media screen and (min-width: 710px) {
+  @media screen and (min-width: 740px) {
     display: flex;
     height: 110px;
     justify-content: space-between;
@@ -39,12 +39,12 @@ export const Logo = styled.img`
   width: 35px;
   height: 48px;
   margin-right: 0;
-  @media screen and (min-width: 430px) {
+  @media screen and (min-width: 446px) {
     width: 50px;
     height: 72px;
     margin-right: 0;
   }
-  @media screen and (min-width: 710px) {
+  @media screen and (min-width: 740px) {
     width: 59px;
     height: 81px;
     margin-right: 15px;
@@ -53,7 +53,7 @@ export const Logo = styled.img`
 
 export const HeaderText = styled.p`
   display: none;
-  @media screen and (min-width: 710px) {
+  @media screen and (min-width: 740px) {
     display: block;
     font-family: 'Nunito Sans';
     font-style: normal;
@@ -77,7 +77,7 @@ export const HeaderText = styled.p`
 
 export const NavList = styled.ul`
   display: none;
-  @media screen and (min-width: 430px) {
+  @media screen and (min-width: 446px) {
     display: flex;
     list-style: none;
     padding-inline-start: 10px;
@@ -117,7 +117,7 @@ export const NavItem = styled.li`
       ); /* При наведении курсора, увеличиваем ширину подчеркивания до 100% */
     }
   }
-  @media screen and (min-width: 710px) {
+  @media screen and (min-width: 740px) {
     position: relative;
     display: block;
     font-family: 'Didact Gothic', sans-serif;
@@ -182,7 +182,7 @@ export const NavItem = styled.li`
 
 export const HeaderButton = styled.button`
   display: none;
-  @media screen and (min-width: 430px) {
+  @media screen and (min-width: 446px) {
     display: block;
     width: 100px;
     height: 40px;
@@ -202,7 +202,7 @@ export const HeaderButton = styled.button`
       background-color: #b99b8c;
     }
   }
-  @media screen and (min-width: 710px) {
+  @media screen and (min-width: 740px) {
     display: block;
     width: 130px;
     height: 54px;
@@ -248,7 +248,7 @@ export const BurgerMenu = styled.div`
   position: absolute;
   top: 20px;
   left: 20px;
-  @media screen and (min-width: 430px) {
+  @media screen and (min-width: 446px) {
     display: none;
   }
 `;

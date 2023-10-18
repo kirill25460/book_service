@@ -42,7 +42,7 @@ export const Left = styled.div`
 `;
 
 export const Right = styled.div`
-  margin: 80px auto 90px;
+  margin: 30px auto 90px;
   background-color: #e5d2c8;
   padding: 23px 27px 40px;
   border-radius: 37px;
@@ -205,7 +205,6 @@ export const RadioInput2 = styled.input`
   cursor: pointer;
   margin-right: 10px;
   position: relative;
-  
 
   &:checked {
     &::before {
@@ -257,7 +256,7 @@ export const RangeContainer = styled.div`
   background: linear-gradient(to right, #8c5e48, #e0c097);
   position: relative;
   border-radius: 2.5px;
-  margin-left: -15px;
+  margin-left: 0;
   @media screen and (min-width: 670px) {
     width: 600px;
     height: 5px;
@@ -270,7 +269,7 @@ export const RangeContainer = styled.div`
 
 export const RangeLabels = styled.div`
   display: flex;
-  margin-left: -15px;
+  margin-left: 0;
   justify-content: space-between;
   font-family: 'DM Sans', sans-serif;
   font-style: normal;
@@ -279,6 +278,18 @@ export const RangeLabels = styled.div`
   line-height: 30px;
   color: #8c5e48;
   padding-top: 10px;
+  @media screen and (min-width: 670px) {
+    display: flex;
+    margin-left: -15px;
+    justify-content: space-between;
+    font-family: 'DM Sans', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 30px;
+    color: #8c5e48;
+    padding-top: 10px;
+  }
 `;
 
 export const RangeInput = styled.input`

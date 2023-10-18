@@ -89,6 +89,7 @@ export const FormContainer = styled.form`
   justify-content: center;
   margin-right: 0;
   margin-bottom: 60px;
+  margin-top: 15px;
   @media screen and (min-width: 670px) {
     position: relative;
     z-index: 2;
@@ -102,6 +103,7 @@ export const FormContainer = styled.form`
     justify-content: space-around;
     margin-right: 0;
     margin-bottom: 60px;
+    margin-top: 0;
   }
 
   @media screen and (min-width: 950px) {
@@ -117,6 +119,7 @@ export const FormContainer = styled.form`
     justify-content: center;
     margin-right: 0;
     margin-bottom: 0;
+    margin-top: 0;
   }
   @media screen and (min-width: 1080px) {
     width: 460px;
@@ -129,6 +132,7 @@ export const FormContainer = styled.form`
     justify-content: space-between;
     margin-right: 0;
     margin-bottom: 0;
+    margin-top: 0;
   }
 
   @media screen and (min-width: 1365px) {
@@ -142,6 +146,7 @@ export const FormContainer = styled.form`
     justify-content: space-between;
     margin-right: 0;
     margin-bottom: 0;
+    margin-top: 0;
   }
 `;
 
