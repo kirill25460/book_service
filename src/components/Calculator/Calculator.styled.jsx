@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { FiArrowRight } from 'react-icons/fi';
+import { NavLink } from 'react-router-dom';
 // import {MdKeyboardArrowDown} from 'react-icons/md'
 
 export const MainTitle = styled.p`
@@ -102,6 +103,7 @@ export const RightInput = styled.input`
 `;
 
 export const RightButton = styled.button`
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -118,6 +120,12 @@ export const RightButton = styled.button`
   font-size: 16px;
   line-height: 18px;
   text-align: center;
+
+  &:hover {
+    transition: background-color 0.5s ease;
+    background-color: #cc8467;
+    border: 1.5px solid #cc8467;
+  }
 `;
 
 export const Arrow = styled(FiArrowRight)`
@@ -328,4 +336,8 @@ export const RangeMainText = styled.div`
   font-size: 16px;
   line-height: 30px;
   color: #8c5e48;
+`;
+
+export const StyldeLink = styled(NavLink)`
+  text-decoration: none;
 `;

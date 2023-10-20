@@ -24,6 +24,7 @@ import {
   FirstRangeCont,
   RangeMainText,
   RadioInput2,
+  StyldeLink,
 } from './Calculator.styled';
 import Select from 'react-select';
 
@@ -116,20 +117,38 @@ const Calculator = () => {
   useEffect(() => {
     switch (selectedOption) {
       case '1':
-        setDefPrice((((value2 * selectedPaperOption2)+parseInt(selectedOption2))*2).toFixed(2));
+        setDefPrice(
+          (
+            (value2 * selectedPaperOption2 + parseInt(selectedOption2)) *
+            2
+          ).toFixed(2)
+        );
         break;
       case '2':
-        setDefPrice(((value2 * selectedPaperOption2)+parseInt(selectedOption2)).toFixed(2));
+        setDefPrice(
+          (value2 * selectedPaperOption2 + parseInt(selectedOption2)).toFixed(2)
+        );
         break;
       case '3':
-        setDefPrice((((value2 * selectedPaperOption2)+parseInt(selectedOption2))/2).toFixed(2));
+        setDefPrice(
+          (
+            (value2 * selectedPaperOption2 + parseInt(selectedOption2)) /
+            2
+          ).toFixed(2)
+        );
         break;
       default:
     }
 
-
     setFullPrice((defPrice * value).toFixed(2));
-  },[selectedOption, defPrice, value2, selectedOption2, value, selectedPaperOption2]);
+  }, [
+    selectedOption,
+    defPrice,
+    value2,
+    selectedOption2,
+    value,
+    selectedPaperOption2,
+  ]);
 
   const handleRadioChange2 = event => {
     setSelectedOption2(event.target.value);
@@ -145,6 +164,16 @@ const Calculator = () => {
 
   const handleChangePaper = selectedOption => {
     setSelectedPaperOption2(selectedOption.value);
+  };
+
+  const scrollToSection = sectionId => {
+    const section = document.getElementById(sectionId);
+
+    if (section) {
+      section.scrollIntoView({
+        behavior: 'smooth',
+      });
+    }
   };
 
   return (
@@ -204,7 +233,7 @@ const Calculator = () => {
                 type="radio"
                 name="thread"
                 value="60"
-                checked={selectedOption2 === "60"}
+                checked={selectedOption2 === '60'}
                 onChange={handleRadioChange2}
               />
               <RadioSpan>
@@ -217,7 +246,7 @@ const Calculator = () => {
                 type="radio"
                 name="glue"
                 value="30"
-                checked={selectedOption2 === "30"}
+                checked={selectedOption2 === '30'}
                 onChange={handleRadioChange2}
               />
               <RadioSpan>
@@ -283,16 +312,25 @@ const Calculator = () => {
           <RightMainText>Фінальна вартість</RightMainText>
           <RightInputContainer>
             <RightInputText>Ціна за 1 шт ₴ </RightInputText>
-            <RightInput placeholder='' value={defPrice} readOnly />
+            <RightInput placeholder="" value={defPrice} readOnly />
           </RightInputContainer>
           <RightInputContainer>
             <RightInputText>Сума за наклад ₴ </RightInputText>
-            <RightInput placeholder='' value={fullPrice} readOnly/>
+            <RightInput placeholder="" value={fullPrice} readOnly />
           </RightInputContainer>
-          <RightButton>
-            Оформити замовлення
-            <Arrow />
-          </RightButton>
+          <StyldeLink
+            to="/"
+            onClick={() =>
+              setTimeout(() => {
+                scrollToSection('contacts');
+              }, 10)
+            }
+          >
+            <RightButton>
+              Оформити замовлення
+              <Arrow />
+            </RightButton>
+          </StyldeLink>
         </Right>
       </MainContainer>
     </div>
