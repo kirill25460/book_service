@@ -473,6 +473,7 @@ export const RightContactLink = styled.a`
   z-index: 2;
   margin-left: 15px;
   text-align: left;
+  text-decoration: none;
   &:hover {
     color: #e2c4b2;
   }

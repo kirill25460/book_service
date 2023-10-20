@@ -102,17 +102,17 @@ const Contact = () => {
           Залиште свою заявку у формі зворотнього зв&rsquo;язку і ми зв&rsquo;яжемось з вами
           з першої ж нагоди!
         </RightSubTitle>
-        <RightContactLink>
+        <RightContactLink href="mailto:maysternyaknyg@gmail.com">
           <MailLink>
             <Mail />
             maysternyaknyg@gmail.com
           </MailLink>
         </RightContactLink>
-        <RightContactLink>
+        <RightContactLink href="tel:+380986940143">
           <Tel />
           +380 986940143
         </RightContactLink>
-        <RightContactLink>
+        <RightContactLink href="https://maps.google.com/?q=м. Львів, вулиця Зелена 143 А">
           <Geo />
           м. Львів, вулиця Зелена 143 А
         </RightContactLink>
