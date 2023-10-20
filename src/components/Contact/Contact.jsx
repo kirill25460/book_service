@@ -99,7 +99,7 @@ const Contact = () => {
         </FormContainer>
       </Left>
       <Right>
-        <RightSmallText>Зв`язок з нами</RightSmallText>
+        <RightSmallText>Зв'язок з нами</RightSmallText>
         <RightMainTitle>Завжди раді вас чути!</RightMainTitle>
         <RightSubTitle>
           Залиште свою заявку у формі зворотнього зв&rsquo;язку і ми зв&rsquo;яжемось з вами
