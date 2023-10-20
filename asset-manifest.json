@@ -1,9 +1,11 @@
 {
   "files": {
     "main.css": "/book_service/static/css/main.ddf856d9.css",
-    "main.js": "/book_service/static/js/main.9deb7d5a.js",
+    "main.js": "/book_service/static/js/main.23dd6a26.js",
+    "static/media/shadows.png": "/book_service/static/media/shadows.48f0a931ba13b9e4e10e.png",
+    "static/media/shadowpic.png": "/book_service/static/media/shadowpic.e38af1821983f56ec0d2.png",
     "static/media/form_bg.png": "/book_service/static/media/form_bg.24e10880274e402c5489.png",
-    "static/media/wizard.png": "/book_service/static/media/wizard.6d8c10356e4a52da3107.png",
+    "static/media/ds-wizard.png": "/book_service/static/media/ds-wizard.9d2770720d1f939001b0.png",
     "static/media/group-gear.png": "/book_service/static/media/group-gear.59f57c8c632f1df1b605.png",
     "static/media/ContactMagic.png": "/book_service/static/media/ContactMagic.bd35033d7da839359213.png",
     "static/media/Rectangle.png": "/book_service/static/media/Rectangle.85571bff75ae65b6478a.png",
@@ -13,10 +15,10 @@
     "static/media/ContactSmallMagic.png": "/book_service/static/media/ContactSmallMagic.6fa58dbd0ca7060f7d2b.png",
     "index.html": "/book_service/index.html",
     "main.ddf856d9.css.map": "/book_service/static/css/main.ddf856d9.css.map",
-    "main.9deb7d5a.js.map": "/book_service/static/js/main.9deb7d5a.js.map"
+    "main.23dd6a26.js.map": "/book_service/static/js/main.23dd6a26.js.map"
   },
   "entrypoints": [
     "static/css/main.ddf856d9.css",
-    "static/js/main.9deb7d5a.js"
+    "static/js/main.23dd6a26.js"
   ]
 }
