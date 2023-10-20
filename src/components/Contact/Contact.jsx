@@ -27,7 +27,6 @@ import Magic from '../../images/ContactMagic.png';
 import SmallMagic from '../../images/ContactSmallMagic.png';
 import ShadowLight from 'images/shadowpic.png';
 
-
 const Contact = () => {
   const handleSubmit = evt => {
     evt.preventDefault();
@@ -39,9 +38,9 @@ const Contact = () => {
     const comments = form.elements.comments.value;
     console.log(name, email, tel, company, comments);
     form.reset();
-  }
-  const storedData = sessionStorage.getItem('userData');
-  console.log(storedData)
+  };
+  const storedData = sessionStorage.getItem('calcData');
+  const data = JSON.parse(storedData);
 
   return (
     <ContactContainer id="contacts">
@@ -92,7 +91,9 @@ const Contact = () => {
               id="comments"
               placeholder="Просимо вас описати ваш коментар сюди..."
             >
-              {storedData}
+              {data === null
+                ? ''
+                : `Формат : ${data.format}\nПалітурка чи обкладинка : ${data.palit}\nПапір для внутрішнього блоку: ${data.paper}\nНаклад: ${data.naklad}\nКількість сторінок: ${data.amount}\nЦіна за штуку: ${data.pricePerOne}\nСума: ${data.allPrice}`}
             </FormBigInput>
           </FormBigContainer>
           <FormButton type="submit">
@@ -104,8 +105,8 @@ const Contact = () => {
         <RightSmallText>Зв'язок з нами</RightSmallText>
         <RightMainTitle>Завжди раді вас чути!</RightMainTitle>
         <RightSubTitle>
-          Залиште свою заявку у формі зворотнього зв&rsquo;язку і ми зв&rsquo;яжемось з вами
-          з першої ж нагоди!
+          Залиште свою заявку у формі зворотнього зв&rsquo;язку і ми
+          зв&rsquo;яжемось з вами з першої ж нагоди!
         </RightSubTitle>
         <RightContactLink href="mailto:maysternyaknyg@gmail.com">
           <MailLink>

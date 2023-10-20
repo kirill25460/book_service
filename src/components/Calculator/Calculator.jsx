@@ -102,7 +102,10 @@ const Calculator = () => {
   };
 
   const [selectedOption, setSelectedOption] = useState('1');
+  const [selectedOptionText, setSelectedOptionText] = useState('');
   const [selectedOption2, setSelectedOption2] = useState('60');
+  const [selectedOption2Text, setSelectedOption2Text] = useState('');
+  const [selectedInPaper2Text, setSelectedInPaper2Text] = useState('');
   const [selectedPaperOption2, setSelectedPaperOption2] = useState(0);
   const [value, setValue] = useState(100);
   const [value2, setValue2] = useState(100);
@@ -117,6 +120,7 @@ const Calculator = () => {
   useEffect(() => {
     switch (selectedOption) {
       case '1':
+        setSelectedOptionText("A4")
         setDefPrice(
           (
             (value2 * selectedPaperOption2 + parseInt(selectedOption2)) *
@@ -125,11 +129,13 @@ const Calculator = () => {
         );
         break;
       case '2':
+        setSelectedOptionText("A5")
         setDefPrice(
           (value2 * selectedPaperOption2 + parseInt(selectedOption2)).toFixed(2)
         );
         break;
       case '3':
+        setSelectedOptionText("A6")
         setDefPrice(
           (
             (value2 * selectedPaperOption2 + parseInt(selectedOption2)) /
@@ -140,6 +146,12 @@ const Calculator = () => {
       default:
     }
 
+    if(selectedOption2 === '30'){
+      setSelectedOption2Text("М'яка кольорова обкладинка з ламінацією.")
+    }else{
+      setSelectedOption2Text("Тверда кольорова палітурка 7БЦ.")
+    }
+
     setFullPrice((defPrice * value).toFixed(2));
   }, [
     selectedOption,
@@ -147,7 +159,7 @@ const Calculator = () => {
     value2,
     selectedOption2,
     value,
-    selectedPaperOption2,
+    selectedPaperOption2
   ]);
 
   const handleRadioChange2 = event => {
@@ -164,6 +176,7 @@ const Calculator = () => {
 
   const handleChangePaper = selectedOption => {
     setSelectedPaperOption2(selectedOption.value);
+    setSelectedInPaper2Text(selectedOption.label)
   };
 
   const scrollToSection = sectionId => {
@@ -177,11 +190,13 @@ const Calculator = () => {
   };
 
   const data = {
-    format: selectedOption,
-    palit: selectedOption2,
-    paper: options2.value,
+    format: selectedOptionText,
+    palit: selectedOption2Text,
+    paper: selectedInPaper2Text,
     naklad: value,
     amount: value2,
+    pricePerOne: defPrice,
+    allPrice: fullPrice,
   };
 
   return (
@@ -334,7 +349,7 @@ const Calculator = () => {
               }, 10)
             }
           >
-            <RightButton onClick={sessionStorage.setItem('userData', JSON.stringify(data))}>
+            <RightButton onClick={()=>sessionStorage.setItem('calcData', JSON.stringify(data))}>
               Оформити замовлення
               <Arrow />
             </RightButton>
