@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import FonImg from '../../images/Rectangle.png';
 import MobBg from '../../images/mob-main-bg.png';
+
+
 import { NavLink } from 'react-router-dom';
 export const MainContainer = styled.div`
   overflow: hidden;
@@ -122,31 +124,62 @@ export const MainButton = styled.button`
   }
 `;
 
+
 export const MainPic = styled.img`
   display: none;
   @media screen and (min-width: 950px) {
     display: block;
-    width: 745px;
-    height: 731px;
+    width: 815px;
+    height: 735px;
     margin-left: 400px;
-    z-index: 2;
+    z-index: 5;
+    
   }
   @media screen and (min-width: 1440px) {
     margin: 0;
-    width: 745px;
   }
 `;
 
 export const MainMobPic = styled.img`
   position: absolute;
   right: 0;
-  top: 10px;
-  width: 245px;
-  height: 383px;
+
+  width: 260px;
+  height: 390px;
   @media screen and (min-width: 950px) {
     display: none;
   }
 `;
+export const Shadow = styled.img`
+position: absolute;
+width:350px;
+right:0;
+ height: auto;
+@media screen and (min-width: 1024px) {
+width:1000px;
+}
+@media screen and (min-width: 1921px) {
+  display:none;
+}
+`;
+
+export const MainShadow = styled.img`
+  position: absolute;
+  display:none;
+  // width: 350px;
+  // height: auto;
+  //  right: -60px;
+  //  @media screen and (min-width: 1024px) {
+  //   width: 950px;
+  //   right: 0;
+  // }
+   @media screen and (min-width: 1921px) {
+    width: 1250px;
+    display:block;
+   right:250px;
+  }
+`;
+
 
 export const Wrap = styled.div`
   display: flex;

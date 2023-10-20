@@ -6,14 +6,18 @@ import {
   MainButton,
   MainPic,
   MainMobPic,
+  MainShadow,
   Main,
   MainPar,
   Wrap,
+  Shadow,
   StyledLink,
 } from './MainSection.styled';
-import man from 'images/wizard.png';
+import man from 'images/ds-wizard.png';
 import mobman from 'images/mob-wizard.png';
 import trydetail from 'images/group-gear.png';
+import ShadowLight from 'images/shadows.png';
+import MShadow from 'images/shadowpic.png';
 
 const MainSection = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -42,8 +46,11 @@ const MainSection = () => {
             <MainButton>Галерея наших робіт</MainButton>
           </StyledLink>
         </MainLeft>
+        <Shadow src={MShadow} alt="shadow"/>
+       <MainShadow src={ShadowLight} alt="shadow" />
         <MainPic src={man} alt="Man" />
         <MainMobPic src={mobman} alt="Man" />
+      
       </Wrap>
     </MainContainer>
   );

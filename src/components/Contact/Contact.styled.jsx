@@ -546,3 +546,20 @@ export const MagicSmallPic = styled.img`
     display: none;
   }
 `;
+
+
+export const MainShadow = styled.img`
+  position: absolute;
+  width: 350px;
+  height: auto;
+  top:150px;
+   right: 0px;
+   @media screen and (min-width: 426px) {
+    width: 500px;
+    top:110px;
+  }
+   @media screen and (min-width: 950px) {
+    display:none;
+  }
+
+`;

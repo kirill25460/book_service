@@ -14,6 +14,7 @@ import {
   RightMainTitle,
   RightSubTitle,
   RightContactLink,
+  MainShadow,
   Mail,
   Tel,
   Geo,
@@ -24,6 +25,7 @@ import {
 
 import Magic from '../../images/ContactMagic.png';
 import SmallMagic from '../../images/ContactSmallMagic.png';
+import ShadowLight from 'images/shadowpic.png';
 
 
 const Contact = () => {
@@ -119,6 +121,7 @@ const Contact = () => {
           <Geo />
           м. Львів, вулиця Зелена 143 А
         </RightContactLink>
+        <MainShadow src={ShadowLight} alt="shadow" />
         <MagicPic src={Magic} alt="Magic" />
         <MagicSmallPic src={SmallMagic} alt="Magic" />
       </Right>
