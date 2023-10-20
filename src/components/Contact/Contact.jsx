@@ -25,8 +25,8 @@ import {
 import Magic from '../../images/ContactMagic.png';
 import SmallMagic from '../../images/ContactSmallMagic.png';
 
-const Contact = () => {
 
+const Contact = () => {
   const handleSubmit = evt => {
     evt.preventDefault();
     const form = evt.currentTarget;
@@ -38,7 +38,8 @@ const Contact = () => {
     console.log(name, email, tel, company, comments);
     form.reset();
   }
-
+  const storedData = sessionStorage.getItem('userData');
+  console.log(storedData)
 
   return (
     <ContactContainer id="contacts">
@@ -88,7 +89,9 @@ const Contact = () => {
               name="comments"
               id="comments"
               placeholder="Просимо вас описати ваш коментар сюди..."
-            />
+            >
+              {storedData}
+            </FormBigInput>
           </FormBigContainer>
           <FormButton type="submit">
             Надіслати <Arrow />

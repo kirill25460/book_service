@@ -176,6 +176,14 @@ const Calculator = () => {
     }
   };
 
+  const data = {
+    format: selectedOption,
+    palit: selectedOption2,
+    paper: options2.value,
+    naklad: value,
+    amount: value2,
+  };
+
   return (
     <div>
       <MainTitle>Калькулятор вартості послуг</MainTitle>
@@ -326,7 +334,7 @@ const Calculator = () => {
               }, 10)
             }
           >
-            <RightButton>
+            <RightButton onClick={sessionStorage.setItem('userData', JSON.stringify(data))}>
               Оформити замовлення
               <Arrow />
             </RightButton>
