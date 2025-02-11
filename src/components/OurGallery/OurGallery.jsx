@@ -7,7 +7,7 @@ import {
   BigContainer,
   BigPic
 } from './OurGallery.styled';
-import Gal from '../../images/gallery.png';
+
 import knugu1 from '../../images/knugu1.jpg';
 import knugu2 from '../../images/knugu2.jpg';
 import knugu3 from '../../images/knugu3.jpg';
