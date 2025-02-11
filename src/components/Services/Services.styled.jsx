@@ -59,23 +59,15 @@ export const SubText = styled.div`
 export const ServicesItemContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   margin: 0 21px;
   gap: 30px;
   @media screen and (min-width: 710px) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+ 
     margin: 0 90px;
-    gap: 30px;
+  
   }
-  @media screen and (min-width: 1005px) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 0 90px;
-    gap: 30px;
-  }
+
 `;
 
 export const ServicesItem = styled.div`

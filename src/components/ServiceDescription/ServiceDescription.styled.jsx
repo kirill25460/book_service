@@ -97,7 +97,7 @@ export const SubText = styled.p`
     font-family: 'DM Sans', sans-serif;
     font-style: normal;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 18px;
     line-height: 30px;
     text-align: center;
     color: #ab9284;
